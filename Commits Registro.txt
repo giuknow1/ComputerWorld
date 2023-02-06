@@ -1,6 +1,13 @@
-1. Commit de prueba + TXT
+COMPUTER WORLD ... COMMITS
 
+
+-----DIA 1-----
+1. Commit de prueba + TXT
 2. Creadas sub-carpetas en carpeta Assets
+
+
+-----DIA 2-----
 3. Creado Objeto Personaje
 4. Script "Jugador" para el movimiento del personaje.
 5. Agregado Script "Camara" a la camara principal, para vista en primera persona.
+6. Assets ordenados en sub-carpeta "Jugador"
