@@ -2,3 +2,4 @@
 
 2. Creadas sub-carpetas en carpeta Assets
 3. Creado Objeto Personaje
+4. Script "Jugador" para el movimiento del personaje.
