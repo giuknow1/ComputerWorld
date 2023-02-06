@@ -1,3 +1,4 @@
 1. Commit de prueba + TXT
 
 2. Creadas sub-carpetas en carpeta Assets
+3. Creado Objeto Personaje
