@@ -3,3 +3,4 @@
 2. Creadas sub-carpetas en carpeta Assets
 3. Creado Objeto Personaje
 4. Script "Jugador" para el movimiento del personaje.
+5. Agregado Script "Camara" a la camara principal, para vista en primera persona.
