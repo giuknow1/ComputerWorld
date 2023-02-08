@@ -9,6 +9,9 @@ public class Inventario : MonoBehaviour
     public GameObject inventario;
     public bool abrir_inv;
 
+    public GameObject Selector;
+    public int ID;
+
     void OnTriggerEnter(Collider inv_coll)
     {
         if (inv_coll.CompareTag("Item"))
@@ -25,6 +28,34 @@ public class Inventario : MonoBehaviour
         }
     }
 
+
+    public void NavegarEnInventario()
+    {
+        if (Input.GetKeyDown(KeyCode.RightArrow) && ID < Bolsa.Count-1)
+        {
+            ID++;
+        }
+
+        if (Input.GetKeyDown(KeyCode.LeftArrow) && ID > 0)
+        {
+            ID--;
+        }
+
+        if (Input.GetKeyDown(KeyCode.UpArrow) && ID > 3)
+        {
+            ID -= 4;
+        }
+
+        if (Input.GetKeyDown(KeyCode.DownArrow) && ID < 12)
+        {
+            ID += 4;
+        }
+
+        Selector.transform.position = Bolsa[ID].transform.position; 
+    }
+
+
+
     // Start is called before the first frame update
     void Start()
     {
@@ -34,13 +65,18 @@ public class Inventario : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+
+        NavegarEnInventario();
+        
         if (abrir_inv)
         {
-            inventario.SetActive(true); 
+            inventario.SetActive(true);
+            Selector.SetActive(true);
         } 
         else
         {
             inventario.SetActive(false);
+            Selector.SetActive(false);
         }
 
         if (Input.GetKeyDown(KeyCode.E))

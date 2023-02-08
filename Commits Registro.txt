@@ -15,3 +15,4 @@ COMPUTER WORLD ... COMMITS
 
 -----DIA 3-----
 7. Agregado Invenetario de jugador (Sin interaccion)
+8. Agregado selector de inventario y navegacion
