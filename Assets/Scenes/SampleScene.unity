@@ -1353,6 +1353,63 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1286640642}
   m_CullTransparentMesh: 1
+--- !u!1 &1288188037
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1288188039}
+  - component: {fileID: 1288188038}
+  m_Layer: 0
+  m_Name: Gestor de Audio
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1288188038
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288188037}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b68ebfeee8684df438c7bd644e0ab49d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sonidos:
+  - Nombre: Inventario
+    ClipSonido: {fileID: 8300000, guid: b31cdccd7fe63c1438c788968ec7dcae, type: 3}
+    Volumen: 1
+    pitch: 1
+    repetir: 0
+    FuenteAudio: {fileID: 0}
+  - Nombre: Slot
+    ClipSonido: {fileID: 8300000, guid: 5caa4d08d86050840abc768a25750488, type: 3}
+    Volumen: 1
+    pitch: 1
+    repetir: 0
+    FuenteAudio: {fileID: 0}
+--- !u!4 &1288188039
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288188037}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 4.39, y: 2.85, z: -0.48}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 6
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1300650023
 GameObject:
   m_ObjectHideFlags: 0
@@ -1898,6 +1955,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   v_mov: 7
+  canMove: 1
 --- !u!114 &1652853419
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -31,27 +31,34 @@ public class Inventario : MonoBehaviour
 
     public void NavegarEnInventario()
     {
-        if (Input.GetKeyDown(KeyCode.D) && ID < Bolsa.Count-1)
+        if (abrir_inv)
         {
-            ID++;
-        }
+            if (Input.GetKeyDown(KeyCode.D) && ID < Bolsa.Count - 1)
+            {
+                ID++;
+                GestorDeAudio.instancia.ReproducirSonido("Slot");
+            }
 
-        if (Input.GetKeyDown(KeyCode.A) && ID > 0)
-        {
-            ID--;
-        }
+            if (Input.GetKeyDown(KeyCode.A) && ID > 0)
+            {
+                ID--;
+                GestorDeAudio.instancia.ReproducirSonido("Slot");
+            }
 
-        if (Input.GetKeyDown(KeyCode.W) && ID > 3)
-        {
-            ID -= 4;
-        }
+            if (Input.GetKeyDown(KeyCode.W) && ID > 3)
+            {
+                ID -= 4;
+                GestorDeAudio.instancia.ReproducirSonido("Slot");
+            }
 
-        if (Input.GetKeyDown(KeyCode.S) && ID < 12)
-        {
-            ID += 4;
-        }
+            if (Input.GetKeyDown(KeyCode.S) && ID < 12)
+            {
+                ID += 4;
+                GestorDeAudio.instancia.ReproducirSonido("Slot");
+            }
 
-        Selector.transform.position = Bolsa[ID].transform.position; 
+            Selector.transform.position = Bolsa[ID].transform.position;
+        }
     }
 
 
@@ -70,18 +77,22 @@ public class Inventario : MonoBehaviour
         
         if (abrir_inv)
         {
+            
             inventario.SetActive(true);
             Selector.SetActive(true);
+
         } 
         else
         {
+            GestorDeAudio.instancia.ReproducirSonido("Inventario");
             inventario.SetActive(false);
             Selector.SetActive(false);
         }
 
         if (Input.GetKeyDown(KeyCode.E))
         {
-            abrir_inv = !abrir_inv; 
+            abrir_inv = !abrir_inv;
+            
         }
     }         
 
