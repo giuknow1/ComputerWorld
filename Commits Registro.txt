@@ -11,3 +11,7 @@ COMPUTER WORLD ... COMMITS
 4. Script "Jugador" para el movimiento del personaje.
 5. Agregado Script "Camara" a la camara principal, para vista en primera persona.
 6. Assets ordenados en sub-carpeta "Jugador"
+
+
+-----DIA 3-----
+7. Agregado Invenetario de jugador (Sin interaccion)
