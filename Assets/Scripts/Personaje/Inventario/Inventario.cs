@@ -31,22 +31,22 @@ public class Inventario : MonoBehaviour
 
     public void NavegarEnInventario()
     {
-        if (Input.GetKeyDown(KeyCode.RightArrow) && ID < Bolsa.Count-1)
+        if (Input.GetKeyDown(KeyCode.D) && ID < Bolsa.Count-1)
         {
             ID++;
         }
 
-        if (Input.GetKeyDown(KeyCode.LeftArrow) && ID > 0)
+        if (Input.GetKeyDown(KeyCode.A) && ID > 0)
         {
             ID--;
         }
 
-        if (Input.GetKeyDown(KeyCode.UpArrow) && ID > 3)
+        if (Input.GetKeyDown(KeyCode.W) && ID > 3)
         {
             ID -= 4;
         }
 
-        if (Input.GetKeyDown(KeyCode.DownArrow) && ID < 12)
+        if (Input.GetKeyDown(KeyCode.S) && ID < 12)
         {
             ID += 4;
         }

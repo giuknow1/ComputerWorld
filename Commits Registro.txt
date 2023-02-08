@@ -16,3 +16,4 @@ COMPUTER WORLD ... COMMITS
 -----DIA 3-----
 7. Agregado Invenetario de jugador (Sin interaccion)
 8. Agregado selector de inventario y navegacion
+9. Modificacion de Script para cancelar movimiento de personaje en inventario
