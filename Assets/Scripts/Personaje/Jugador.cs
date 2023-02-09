@@ -4,7 +4,8 @@ using UnityEngine.UI;
 public class Jugador : MonoBehaviour
 { 
     public float v_mov = 10.0f;
-    public bool canMove = true; 
+    public bool canMove = true;
+    public bool can2 = false;
 
 
     public void ControlMovimiento ()
@@ -24,8 +25,23 @@ public class Jugador : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.E))
         {
-            canMove = !canMove;
+            if (can2 == true)
+            {
+                can2 = false;
+            } else
+            {
+
+                canMove = !canMove;
+                can2 = false;
+            }
+
         }
+
+        if (canMove == false && Input.GetKeyDown(KeyCode.Q))
+        {
+            can2 = true;
+        }
+
     }
     void Start()
     { 

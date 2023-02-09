@@ -1471,6 +1471,18 @@ MonoBehaviour:
     pitch: 1
     repetir: 0
     FuenteAudio: {fileID: 0}
+  - Nombre: Bag
+    ClipSonido: {fileID: 8300000, guid: 7f0aedb902ecf53418cab801951e6a21, type: 3}
+    Volumen: 1
+    pitch: 1
+    repetir: 0
+    FuenteAudio: {fileID: 0}
+  - Nombre: Inspeccionar
+    ClipSonido: {fileID: 8300000, guid: b787e56881d2bc64bb556df5b1702263, type: 3}
+    Volumen: 1
+    pitch: 1
+    repetir: 0
+    FuenteAudio: {fileID: 0}
 --- !u!4 &1288188039
 Transform:
   m_ObjectHideFlags: 0
@@ -1989,7 +2001,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 31321ba15b8f8eb4c954353edc038b1d, type: 2}
+  - {fileID: 2100000, guid: 4de3cc1c935fa9140aeef7805a5431fc, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -2027,8 +2039,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1639212912}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.58, y: 1.85, z: -5.08}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -0.378, y: 1.4247, z: -5.4894}
+  m_LocalScale: {x: 0.5960149, y: 0.26290116, z: 0.06464002}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -2049,6 +2061,7 @@ GameObject:
   - component: {fileID: 1652853413}
   - component: {fileID: 1652853418}
   - component: {fileID: 1652853419}
+  - component: {fileID: 1652853420}
   m_Layer: 0
   m_Name: Personaje
   m_TagString: Untagged
@@ -2166,6 +2179,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   v_mov: 7
   canMove: 1
+  can2: 0
 --- !u!114 &1652853419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2203,6 +2217,19 @@ MonoBehaviour:
   abrir_inv: 0
   Selector: {fileID: 133402138}
   ID: 0
+--- !u!114 &1652853420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1652853412}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0d733ce91fcddb946ae83ef31b84fc72, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Casete: {fileID: 1639212912}
 --- !u!1 &1681154477
 GameObject:
   m_ObjectHideFlags: 0

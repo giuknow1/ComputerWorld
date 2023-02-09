@@ -37,6 +37,7 @@ public class Inventario : MonoBehaviour
     
         if ((slot0 == true) && (Input.GetKeyDown(KeyCode.Q)) && (ID == 0) && (abrir_inv))
         {
+            GestorDeAudio.instancia.ReproducirSonido("Inspeccionar");
             casete.SetActive(true);
             Selector.SetActive(false);
             inv_control = true;
