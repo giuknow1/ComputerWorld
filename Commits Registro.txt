@@ -24,3 +24,4 @@ COMPUTER WORLD ... COMMITS
 
 -----DIA 4-----
 13. Agregado sonido al inspeccionar un objeto del inventario
+14. Elaborado escenario de la primera parte del juego
