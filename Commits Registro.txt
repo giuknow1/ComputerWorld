@@ -32,3 +32,4 @@ COMPUTER WORLD ... COMMITS
 16. Agregadas sub-carpetas "Inventario" e "Items" a la carpeta Sprites con fines de practicidad
 17. Agregado item Calculadora
 18. Agregado Item Linterna Ultravioleta
+19. Agregado Item Consola

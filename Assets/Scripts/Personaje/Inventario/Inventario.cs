@@ -12,10 +12,12 @@ public class Inventario : MonoBehaviour
     public GameObject casete;
     public GameObject calculadora;
     public GameObject linterna;
+    public GameObject consola;
 
     public bool slot0 = false;
     public bool slot1 = false;
     public bool slot2 = false;
+    public bool slot3 = false;
 
     public bool inv_control = false;
     public bool abrir_descripcion;
@@ -54,6 +56,15 @@ public class Inventario : MonoBehaviour
             Bolsa[2].GetComponent<Image>().sprite = inv_coll.GetComponent<SpriteRenderer>().sprite;
 
         }
+
+        if (inv_coll.CompareTag("Consola"))
+        {
+
+            slot3 = true;
+            Bolsa[3].GetComponent<Image>().enabled = true;
+            Bolsa[3].GetComponent<Image>().sprite = inv_coll.GetComponent<SpriteRenderer>().sprite;
+
+        }
     }
 
 
@@ -81,6 +92,15 @@ public class Inventario : MonoBehaviour
         {
             GestorDeAudio.instancia.ReproducirSonido("Inspeccionar");
             linterna.SetActive(true);
+            Selector.SetActive(false);
+            inv_control = true;
+        }
+
+
+        if ((slot3 == true) && (Input.GetKeyDown(KeyCode.Q)) && (ID == 3) && (abrir_inv) && (inv_control == false))
+        {
+            GestorDeAudio.instancia.ReproducirSonido("Inspeccionar");
+            consola.SetActive(true);
             Selector.SetActive(false);
             inv_control = true;
         }
@@ -132,6 +152,7 @@ public class Inventario : MonoBehaviour
         casete.SetActive(false);
         calculadora.SetActive(false);
         linterna.SetActive(false);
+        consola.SetActive(false);
     }
 
     // Update is called once per frame
@@ -163,6 +184,7 @@ public class Inventario : MonoBehaviour
                 casete.SetActive(false);
                 calculadora.SetActive(false);
                 linterna.SetActive(false);
+                consola.SetActive(false);
                 Selector.SetActive(true);
                 inv_control = false;
 
