@@ -35,7 +35,7 @@ public class Inventario : MonoBehaviour
 
     void Slot0() { 
     
-        if ((slot0 == true) && (Input.GetKeyDown(KeyCode.Q)) && (ID == 0) && (abrir_inv))
+        if ((slot0 == true) && (Input.GetKeyDown(KeyCode.Q)) && (ID == 0) && (abrir_inv) && (inv_control == false))
         {
             GestorDeAudio.instancia.ReproducirSonido("Inspeccionar");
             casete.SetActive(true);
@@ -47,7 +47,7 @@ public class Inventario : MonoBehaviour
 
     public void NavegarEnInventario()
     {
-        if (abrir_inv)
+        if (abrir_inv && inv_control == false)
         {
             if (Input.GetKeyDown(KeyCode.D) && ID < Bolsa.Count - 1)
             {
