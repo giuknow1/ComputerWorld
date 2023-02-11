@@ -33,3 +33,4 @@ COMPUTER WORLD ... COMMITS
 17. Agregado item Calculadora
 18. Agregado Item Linterna Ultravioleta
 19. Agregado Item Consola
+20. Modificado Script Inventario para que al abrir el inventario el seelctor este siempre en el primer slot.

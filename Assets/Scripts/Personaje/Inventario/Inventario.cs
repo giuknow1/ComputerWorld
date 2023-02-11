@@ -174,6 +174,7 @@ public class Inventario : MonoBehaviour
             GestorDeAudio.instancia.ReproducirSonido("Inventario");
             inventario.SetActive(false);
             Selector.SetActive(false);
+            ID = 0;
 
         }
 
