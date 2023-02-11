@@ -29,3 +29,4 @@ COMPUTER WORLD ... COMMITS
 
 -----DIA 5-----
 15. Creado Prefab Casete
+16. Agregadas sub-carpetas "Inventario" e "Items" a la carpeta Sprites con fines de practicidad
