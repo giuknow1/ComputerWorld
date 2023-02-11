@@ -9,8 +9,10 @@ public class Inventario : MonoBehaviour
 
     public GameObject inventario;
     public GameObject casete;
+    public GameObject calculadora;
 
     public bool slot0 = false;
+    public bool slot1 = false;
 
     public bool inv_control = false;
     public bool abrir_descripcion;
@@ -30,15 +32,33 @@ public class Inventario : MonoBehaviour
             Bolsa[0].GetComponent<Image>().sprite = inv_coll.GetComponent<SpriteRenderer>().sprite;
            
         }
+
+        if (inv_coll.CompareTag("Calculadora"))
+        {
+
+            slot1 = true;
+            Bolsa[1].GetComponent<Image>().enabled = true;
+            Bolsa[1].GetComponent<Image>().sprite = inv_coll.GetComponent<SpriteRenderer>().sprite;
+
+        }
     }
 
 
-    void Slot0() { 
+    void Slots() { 
     
         if ((slot0 == true) && (Input.GetKeyDown(KeyCode.Q)) && (ID == 0) && (abrir_inv) && (inv_control == false))
         {
             GestorDeAudio.instancia.ReproducirSonido("Inspeccionar");
             casete.SetActive(true);
+            Selector.SetActive(false);
+            inv_control = true;
+        }
+
+
+        if ((slot1 == true) && (Input.GetKeyDown(KeyCode.Q)) && (ID == 1) && (abrir_inv) && (inv_control == false))
+        {
+            GestorDeAudio.instancia.ReproducirSonido("Inspeccionar");
+            calculadora.SetActive(true);
             Selector.SetActive(false);
             inv_control = true;
         }
@@ -87,12 +107,14 @@ public class Inventario : MonoBehaviour
     void Start()
     {
         casete.SetActive(false);
+        calculadora.SetActive(false);
     }
 
     // Update is called once per frame
     void Update()
     {
-        Slot0();
+        Slots();
+
         NavegarEnInventario();
 
         if (abrir_inv)
@@ -115,6 +137,7 @@ public class Inventario : MonoBehaviour
             if (inv_control == true)
             {
                 casete.SetActive(false);
+                calculadora.SetActive(false);
                 Selector.SetActive(true);
                 inv_control = false;
 

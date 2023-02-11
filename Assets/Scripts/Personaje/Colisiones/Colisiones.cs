@@ -4,11 +4,17 @@ using UnityEngine;
 
 public class Colisiones : MonoBehaviour
 {
-    public GameObject Casete;
+ 
 
     private void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.CompareTag("Item") == true)
+        {
+            other.gameObject.SetActive(false);
+            GestorDeAudio.instancia.ReproducirSonido("Bag");
+        }
+
+        if (other.gameObject.CompareTag("Calculadora") == true)
         {
             other.gameObject.SetActive(false);
             GestorDeAudio.instancia.ReproducirSonido("Bag");
