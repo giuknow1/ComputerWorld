@@ -8,11 +8,14 @@ public class Inventario : MonoBehaviour
     public List<GameObject> Bolsa = new List<GameObject>();
 
     public GameObject inventario;
+
     public GameObject casete;
     public GameObject calculadora;
+    public GameObject linterna;
 
     public bool slot0 = false;
     public bool slot1 = false;
+    public bool slot2 = false;
 
     public bool inv_control = false;
     public bool abrir_descripcion;
@@ -41,6 +44,16 @@ public class Inventario : MonoBehaviour
             Bolsa[1].GetComponent<Image>().sprite = inv_coll.GetComponent<SpriteRenderer>().sprite;
 
         }
+
+
+        if (inv_coll.CompareTag("Linterna"))
+        {
+
+            slot2 = true;
+            Bolsa[2].GetComponent<Image>().enabled = true;
+            Bolsa[2].GetComponent<Image>().sprite = inv_coll.GetComponent<SpriteRenderer>().sprite;
+
+        }
     }
 
 
@@ -62,6 +75,16 @@ public class Inventario : MonoBehaviour
             Selector.SetActive(false);
             inv_control = true;
         }
+
+
+        if ((slot2 == true) && (Input.GetKeyDown(KeyCode.Q)) && (ID == 2) && (abrir_inv) && (inv_control == false))
+        {
+            GestorDeAudio.instancia.ReproducirSonido("Inspeccionar");
+            linterna.SetActive(true);
+            Selector.SetActive(false);
+            inv_control = true;
+        }
+
     }
 
 
@@ -108,6 +131,7 @@ public class Inventario : MonoBehaviour
     {
         casete.SetActive(false);
         calculadora.SetActive(false);
+        linterna.SetActive(false);
     }
 
     // Update is called once per frame
@@ -138,6 +162,7 @@ public class Inventario : MonoBehaviour
             {
                 casete.SetActive(false);
                 calculadora.SetActive(false);
+                linterna.SetActive(false);
                 Selector.SetActive(true);
                 inv_control = false;
 
