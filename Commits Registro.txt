@@ -37,3 +37,4 @@ COMPUTER WORLD ... COMMITS
 
 -----DIA 6-----
 21. Agregado Item Destornillador
+22. Modificado Script Camara para que la camara nu se mueva cuando el inventario este abierto
