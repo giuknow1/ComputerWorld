@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class Colisiones : MonoBehaviour
 {
@@ -28,6 +29,12 @@ public class Colisiones : MonoBehaviour
 
 
         if (other.gameObject.CompareTag("Consola") == true)
+        {
+            other.gameObject.SetActive(false);
+            GestorDeAudio.instancia.ReproducirSonido("Bag");
+        }
+
+        if (other.gameObject.CompareTag("Drill") == true)
         {
             other.gameObject.SetActive(false);
             GestorDeAudio.instancia.ReproducirSonido("Bag");

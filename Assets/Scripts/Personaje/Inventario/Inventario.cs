@@ -13,11 +13,13 @@ public class Inventario : MonoBehaviour
     public GameObject calculadora;
     public GameObject linterna;
     public GameObject consola;
+    public GameObject Drill;
 
     public bool slot0 = false;
     public bool slot1 = false;
     public bool slot2 = false;
     public bool slot3 = false;
+    public bool slot4 = false;
 
     public bool inv_control = false;
     public bool abrir_descripcion;
@@ -65,6 +67,15 @@ public class Inventario : MonoBehaviour
             Bolsa[3].GetComponent<Image>().sprite = inv_coll.GetComponent<SpriteRenderer>().sprite;
 
         }
+
+        if (inv_coll.CompareTag("Drill"))
+        {
+
+            slot4 = true;
+            Bolsa[4].GetComponent<Image>().enabled = true;
+            Bolsa[4].GetComponent<Image>().sprite = inv_coll.GetComponent<SpriteRenderer>().sprite;
+
+        }
     }
 
 
@@ -105,6 +116,14 @@ public class Inventario : MonoBehaviour
             inv_control = true;
         }
 
+
+        if ((slot4 == true) && (Input.GetKeyDown(KeyCode.Q)) && (ID == 4) && (abrir_inv) && (inv_control == false))
+        {
+            GestorDeAudio.instancia.ReproducirSonido("Inspeccionar");
+            Drill.SetActive(true);
+            Selector.SetActive(false);
+            inv_control = true;
+        }
     }
 
 
@@ -153,6 +172,7 @@ public class Inventario : MonoBehaviour
         calculadora.SetActive(false);
         linterna.SetActive(false);
         consola.SetActive(false);
+        Drill.SetActive(false);
     }
 
     // Update is called once per frame
@@ -186,6 +206,7 @@ public class Inventario : MonoBehaviour
                 calculadora.SetActive(false);
                 linterna.SetActive(false);
                 consola.SetActive(false);
+                Drill.SetActive(false);
                 Selector.SetActive(true);
                 inv_control = false;
 
