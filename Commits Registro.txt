@@ -44,3 +44,4 @@ COMPUTER WORLD ... COMMITS
 23. Agregado item Cinta
 24. Agregado Item Tarjeta
 35. Agregado Item Papel
+36. Agregados Items Llave1 y LLave2

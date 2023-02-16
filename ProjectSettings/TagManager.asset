@@ -12,6 +12,8 @@ TagManager:
   - Cinta
   - Tarjeta
   - Papel
+  - Llave1
+  - Llave2
   layers:
   - Default
   - TransparentFX
