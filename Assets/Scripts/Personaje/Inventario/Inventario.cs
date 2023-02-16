@@ -15,6 +15,7 @@ public class Inventario : MonoBehaviour
     public GameObject consola;
     public GameObject Drill;
     public GameObject Cinta;
+    public GameObject Tarjeta;
 
     public bool slot0 = false;
     public bool slot1 = false;
@@ -22,6 +23,7 @@ public class Inventario : MonoBehaviour
     public bool slot3 = false;
     public bool slot4 = false;
     public bool slot5 = false;
+    public bool slot6 = false;
 
     public bool inv_control = false;
     public bool abrir_descripcion;
@@ -87,6 +89,15 @@ public class Inventario : MonoBehaviour
             Bolsa[5].GetComponent<Image>().sprite = inv_coll.GetComponent<SpriteRenderer>().sprite;
 
         }
+
+        if (inv_coll.CompareTag("Tarjeta"))
+        {
+
+            slot6 = true;
+            Bolsa[6].GetComponent<Image>().enabled = true;
+            Bolsa[6].GetComponent<Image>().sprite = inv_coll.GetComponent<SpriteRenderer>().sprite;
+
+        }
     }
 
 
@@ -143,6 +154,14 @@ public class Inventario : MonoBehaviour
             Selector.SetActive(false);
             inv_control = true;
         }
+
+        if ((slot6 == true) && (Input.GetKeyDown(KeyCode.Q)) && (ID == 6) && (abrir_inv) && (inv_control == false))
+        {
+            GestorDeAudio.instancia.ReproducirSonido("Inspeccionar");
+            Tarjeta.SetActive(true);
+            Selector.SetActive(false);
+            inv_control = true;
+        }
     }
 
 
@@ -193,7 +212,7 @@ public class Inventario : MonoBehaviour
         consola.SetActive(false);
         Drill.SetActive(false);
         Cinta.SetActive(false);
-
+        Tarjeta.SetActive(false);
     }
 
     // Update is called once per frame
@@ -229,6 +248,7 @@ public class Inventario : MonoBehaviour
                 consola.SetActive(false);
                 Drill.SetActive(false);
                 Cinta.SetActive(false);
+                Tarjeta.SetActive(false);
 
                 Selector.SetActive(true);
                 inv_control = false;
