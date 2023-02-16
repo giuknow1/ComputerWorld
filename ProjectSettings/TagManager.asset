@@ -11,6 +11,7 @@ TagManager:
   - Drill
   - Cinta
   - Tarjeta
+  - Papel
   layers:
   - Default
   - TransparentFX

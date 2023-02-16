@@ -43,3 +43,4 @@ COMPUTER WORLD ... COMMITS
 -----DIA 7-----
 23. Agregado item Cinta
 24. Agregado Item Tarjeta
+35. Agregado Item Papel
