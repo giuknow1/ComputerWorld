@@ -39,6 +39,12 @@ public class Colisiones : MonoBehaviour
             other.gameObject.SetActive(false);
             GestorDeAudio.instancia.ReproducirSonido("Bag");
         }
+
+        if (other.gameObject.CompareTag("Cinta") == true)
+        {
+            other.gameObject.SetActive(false);
+            GestorDeAudio.instancia.ReproducirSonido("Bag");
+        }
     }
 
 

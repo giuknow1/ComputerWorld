@@ -9,6 +9,7 @@ TagManager:
   - Linterna
   - Consola
   - Drill
+  - Cinta
   layers:
   - Default
   - TransparentFX
