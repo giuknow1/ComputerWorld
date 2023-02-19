@@ -20,6 +20,7 @@ public class Inventario : MonoBehaviour
     public GameObject Llave1;
     public GameObject Llave2;
     public GameObject Lapiz;
+    public GameObject nightvision;
 
     public bool slot0 = false;
     public bool slot1 = false;
@@ -32,6 +33,7 @@ public class Inventario : MonoBehaviour
     public bool slot8 = false;
     public bool slot9 = false;
     public bool slot10 = false;
+    public bool slot11 = false;
 
     public bool inv_control = false;
     public bool abrir_descripcion;
@@ -142,6 +144,15 @@ public class Inventario : MonoBehaviour
             Bolsa[10].GetComponent<Image>().sprite = inv_coll.GetComponent<SpriteRenderer>().sprite;
 
         }
+
+        if (inv_coll.CompareTag("Nightvision"))
+        {
+
+            slot11 = true;
+            Bolsa[11].GetComponent<Image>().enabled = true;
+            Bolsa[11].GetComponent<Image>().sprite = inv_coll.GetComponent<SpriteRenderer>().sprite;
+
+        }
     }
 
 
@@ -238,6 +249,14 @@ public class Inventario : MonoBehaviour
             Selector.SetActive(false);
             inv_control = true;
         }
+
+        if ((slot11 == true) && (Input.GetKeyDown(KeyCode.Q)) && (ID == 11) && (abrir_inv) && (inv_control == false))
+        {
+            GestorDeAudio.instancia.ReproducirSonido("Inspeccionar");
+            nightvision.SetActive(true);
+            Selector.SetActive(false);
+            inv_control = true;
+        }
     }
 
 
@@ -293,6 +312,8 @@ public class Inventario : MonoBehaviour
         Llave1.SetActive(false);
         Llave2.SetActive(false);
         Lapiz.SetActive(false);
+        nightvision.SetActive(false);
+
     }
 
     // Update is called once per frame
@@ -333,6 +354,7 @@ public class Inventario : MonoBehaviour
                 Llave1.SetActive(false);
                 Llave2.SetActive(false);
                 Lapiz.SetActive(false);
+                nightvision.SetActive(false);
 
                 Selector.SetActive(true);
                 inv_control = false;
