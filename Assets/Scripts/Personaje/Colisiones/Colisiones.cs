@@ -81,6 +81,30 @@ public class Colisiones : MonoBehaviour
             other.gameObject.SetActive(false);
             GestorDeAudio.instancia.ReproducirSonido("Bag");
         }
+
+        if (other.gameObject.CompareTag("Business") == true)
+        {
+            other.gameObject.SetActive(false);
+            GestorDeAudio.instancia.ReproducirSonido("Bag");
+        }
+
+        if (other.gameObject.CompareTag("Numbers") == true)
+        {
+            other.gameObject.SetActive(false);
+            GestorDeAudio.instancia.ReproducirSonido("Bag");
+        }
+
+        if (other.gameObject.CompareTag("Money") == true)
+        {
+            other.gameObject.SetActive(false);
+            GestorDeAudio.instancia.ReproducirSonido("Bag");
+        }
+
+        if (other.gameObject.CompareTag("People") == true)
+        {
+            other.gameObject.SetActive(false);
+            GestorDeAudio.instancia.ReproducirSonido("Bag");
+        }
     }
 
 

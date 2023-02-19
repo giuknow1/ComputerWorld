@@ -21,6 +21,10 @@ public class Inventario : MonoBehaviour
     public GameObject Llave2;
     public GameObject Lapiz;
     public GameObject nightvision;
+    public GameObject Business;
+    public GameObject Numbers;
+    public GameObject Money;
+    public GameObject People;
 
     public bool slot0 = false;
     public bool slot1 = false;
@@ -34,6 +38,10 @@ public class Inventario : MonoBehaviour
     public bool slot9 = false;
     public bool slot10 = false;
     public bool slot11 = false;
+    public bool slot12 = false;
+    public bool slot13 = false;
+    public bool slot14 = false;
+    public bool slot15 = false;
 
     public bool inv_control = false;
     public bool abrir_descripcion;
@@ -153,6 +161,42 @@ public class Inventario : MonoBehaviour
             Bolsa[11].GetComponent<Image>().sprite = inv_coll.GetComponent<SpriteRenderer>().sprite;
 
         }
+
+        if (inv_coll.CompareTag("Business"))
+        {
+
+            slot12 = true;
+            Bolsa[12].GetComponent<Image>().enabled = true;
+            Bolsa[12].GetComponent<Image>().sprite = inv_coll.GetComponent<SpriteRenderer>().sprite;
+
+        }
+
+        if (inv_coll.CompareTag("Numbers"))
+        {
+
+            slot13 = true;
+            Bolsa[13].GetComponent<Image>().enabled = true;
+            Bolsa[13].GetComponent<Image>().sprite = inv_coll.GetComponent<SpriteRenderer>().sprite;
+
+        }
+
+        if (inv_coll.CompareTag("Money"))
+        {
+
+            slot14 = true;
+            Bolsa[14].GetComponent<Image>().enabled = true;
+            Bolsa[14].GetComponent<Image>().sprite = inv_coll.GetComponent<SpriteRenderer>().sprite;
+
+        }
+
+        if (inv_coll.CompareTag("People"))
+        {
+
+            slot15 = true;
+            Bolsa[15].GetComponent<Image>().enabled = true;
+            Bolsa[15].GetComponent<Image>().sprite = inv_coll.GetComponent<SpriteRenderer>().sprite;
+
+        }
     }
 
 
@@ -257,6 +301,38 @@ public class Inventario : MonoBehaviour
             Selector.SetActive(false);
             inv_control = true;
         }
+
+        if ((slot12 == true) && (Input.GetKeyDown(KeyCode.Q)) && (ID == 12) && (abrir_inv) && (inv_control == false))
+        {
+            GestorDeAudio.instancia.ReproducirSonido("Inspeccionar");
+            Business.SetActive(true);
+            Selector.SetActive(false);
+            inv_control = true;
+        }
+
+        if ((slot13 == true) && (Input.GetKeyDown(KeyCode.Q)) && (ID == 13) && (abrir_inv) && (inv_control == false))
+        {
+            GestorDeAudio.instancia.ReproducirSonido("Inspeccionar");
+            Numbers.SetActive(true);
+            Selector.SetActive(false);
+            inv_control = true;
+        }
+
+        if ((slot14 == true) && (Input.GetKeyDown(KeyCode.Q)) && (ID == 14) && (abrir_inv) && (inv_control == false))
+        {
+            GestorDeAudio.instancia.ReproducirSonido("Inspeccionar");
+            Money.SetActive(true);
+            Selector.SetActive(false);
+            inv_control = true;
+        }
+
+        if ((slot15 == true) && (Input.GetKeyDown(KeyCode.Q)) && (ID == 15) && (abrir_inv) && (inv_control == false))
+        {
+            GestorDeAudio.instancia.ReproducirSonido("Inspeccionar");
+            People.SetActive(true);
+            Selector.SetActive(false);
+            inv_control = true;
+        }
     }
 
 
@@ -313,6 +389,10 @@ public class Inventario : MonoBehaviour
         Llave2.SetActive(false);
         Lapiz.SetActive(false);
         nightvision.SetActive(false);
+        Business.SetActive(false);
+        Numbers.SetActive(false);
+        Money.SetActive(false);
+        People.SetActive(false);
 
     }
 
@@ -355,6 +435,10 @@ public class Inventario : MonoBehaviour
                 Llave2.SetActive(false);
                 Lapiz.SetActive(false);
                 nightvision.SetActive(false);
+                Business.SetActive(false);
+                Numbers.SetActive(false);
+                Money.SetActive(false);
+                People.SetActive(false);
 
                 Selector.SetActive(true);
                 inv_control = false;

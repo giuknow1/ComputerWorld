@@ -50,3 +50,4 @@ COMPUTER WORLD ... COMMITS
 -----DIA 8-----
 27. Agregado Item Papel y Lapiz
 28. Agregado Item Vision Nocturna
+29. agregado Items Marcos
