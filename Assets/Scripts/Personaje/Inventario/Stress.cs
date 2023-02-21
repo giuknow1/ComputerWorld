@@ -9,9 +9,11 @@ public class Stress : MonoBehaviour
     public float stress = 100f;
     public bool reduccion = false;
 
+    public bool casete = false;
+
     private void Musica()
     {
-        if (Input.GetKeyDown(KeyCode.Space))
+        if (Input.GetKeyDown(KeyCode.Space) && (casete))
         {
             reduccion = true;
             GestorDeAudio.instancia.ReproducirSonido("Computer World");
@@ -50,6 +52,16 @@ public class Stress : MonoBehaviour
         GestorDeAudio.instancia.PausarSonido("Computer World");
         reduccion = false;
     }
-}
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.CompareTag("Item") == true)
+        {
+            other.gameObject.SetActive(false);
+            casete = true;
+        }
+    }
+
+    }
 
 

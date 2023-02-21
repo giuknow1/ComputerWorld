@@ -54,3 +54,4 @@ COMPUTER WORLD ... COMMITS
 
 -----DIA 9-----
 30. Agregada mecanica de reduccion de estres escuchando musica. Nuevo Script "Stress" y nuevos archivos de sonido.
+31. Modificado script Stress para que solo funcione la musica si se ha tomado el item Casete.
