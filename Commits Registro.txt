@@ -51,3 +51,6 @@ COMPUTER WORLD ... COMMITS
 27. Agregado Item Papel y Lapiz
 28. Agregado Item Vision Nocturna
 29. agregado Items Marcos
+
+-----DIA 9-----
+30. Agregada mecanica de reduccion de estres escuchando musica. Nuevo Script "Stress" y nuevos archivos de sonido.
