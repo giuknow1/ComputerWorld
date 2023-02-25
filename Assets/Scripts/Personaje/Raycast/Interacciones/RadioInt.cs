@@ -8,7 +8,7 @@ public class RadioInt : Interactuable
   public override void Radio()
     {
         base.Radio();
-        //
-        GestorDeAudio.instancia.ReproducirSonido("Computer World");
+
+        Stress.activar_evento_radio = true;
     }
 }

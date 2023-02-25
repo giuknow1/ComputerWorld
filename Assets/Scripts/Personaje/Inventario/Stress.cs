@@ -9,12 +9,17 @@ public class Stress : MonoBehaviour
     public float stress = 100f;
     public bool reduccion = false;
 
+    public static bool activar_evento_radio = false;
+
+    public bool control = true;
     public bool casete = false;
 
     private void Musica()
     {
-        if (Input.GetKeyDown(KeyCode.Space) && (casete))
+        if (Input.GetKeyDown(KeyCode.Mouse0) && (activar_evento_radio) && (casete) && (control))
         {
+            control = false;
+            activar_evento_radio = false;
             reduccion = true;
             GestorDeAudio.instancia.ReproducirSonido("Computer World");
             StartCoroutine(time());
@@ -51,6 +56,7 @@ public class Stress : MonoBehaviour
         yield return new WaitForSeconds(1f);
         GestorDeAudio.instancia.PausarSonido("Computer World");
         reduccion = false;
+        control = true;
     }
 
     private void OnTriggerEnter(Collider other)
