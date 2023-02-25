@@ -38,7 +38,7 @@ public class Stress : MonoBehaviour
             yield return new WaitForSeconds(0.1f);
             if(stress > 0)
             {
-                stress -= 0.075f;
+                stress -= 0.1f;
             }
         }
 
