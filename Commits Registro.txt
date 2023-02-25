@@ -60,3 +60,4 @@ COMPUTER WORLD ... COMMITS
 
 -----DIA 10-----
 32. Agregado nuevo script "Raycast" para detectar objetos interactuables
+33. Agregados nuevos scripts Interactuable y RadioInt (deriva de Interactuable) para las interacciones con el raycast.

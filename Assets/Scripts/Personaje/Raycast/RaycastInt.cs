@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Raycast : MonoBehaviour
+public class RaycastInt : MonoBehaviour
 {
     public new Transform camera;
 
@@ -16,14 +16,15 @@ public class Raycast : MonoBehaviour
     void Update()
     {
         Debug.DrawRay(camera.position, camera.forward * rayDistance, Color.red);
-
-        RaycastHit hit;
-        if (Physics.Raycast(camera.position, camera.forward, out hit, rayDistance, LayerMask.GetMask("Interactuable")))
+        if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            Debug.Log(hit.transform.name);
+            RaycastHit hit;
+            if (Physics.Raycast(camera.position, camera.forward, out hit, rayDistance, LayerMask.GetMask("Interactuable")))
+            {
+                hit.transform.GetComponent<Interactuable>().Radio();
+            }
         }
     }
-
 }
 
 
