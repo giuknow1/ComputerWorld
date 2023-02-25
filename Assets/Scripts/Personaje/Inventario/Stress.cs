@@ -8,22 +8,32 @@ public class Stress : MonoBehaviour
     public Slider stress_bar;
     public float stress = 100f;
     public bool reduccion = false;
-
+    public GameObject casete_ref;
     public static bool activar_evento_radio = false;
 
+    public bool rebobinar = false;
+
     public bool control = true;
+    public bool control_reb = true;
     public bool casete = false;
 
     private void Musica()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0) && (activar_evento_radio) && (casete) && (control))
+        if (Input.GetKeyDown(KeyCode.Mouse0) && (activar_evento_radio) && (casete) && (control) && (!rebobinar))
         {
             control = false;
             activar_evento_radio = false;
             reduccion = true;
             GestorDeAudio.instancia.ReproducirSonido("Computer World");
+            casete_ref.SetActive(false);
             StartCoroutine(time());
             StartCoroutine(MSC());
+        } 
+        else if (Input.GetKeyDown(KeyCode.Mouse0) && (activar_evento_radio) && (casete) && (control) && (rebobinar) && (control_reb))
+        {
+            control_reb = false;
+            GestorDeAudio.instancia.ReproducirSonido("Rebobinar");
+            StartCoroutine(rebob());
         }
     }
 
@@ -52,12 +62,20 @@ public class Stress : MonoBehaviour
     IEnumerator MSC()
     {
         yield return new WaitForSeconds(140f);
-        GestorDeAudio.instancia.ReproducirSonido("Stop");
-        yield return new WaitForSeconds(1f);
-        GestorDeAudio.instancia.PausarSonido("Computer World");
         reduccion = false;
         control = true;
+        casete_ref.SetActive(true);
+        rebobinar = true;
+        control_reb = true;
     }
+
+    IEnumerator rebob()
+    {
+            yield return new WaitForSeconds(19f);
+            rebobinar = false;
+        }
+
+    
 
     private void OnTriggerEnter(Collider other)
     {

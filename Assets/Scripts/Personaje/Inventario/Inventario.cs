@@ -26,7 +26,7 @@ public class Inventario : MonoBehaviour
     public GameObject Money;
     public GameObject People;
 
-    public bool slot0 = false;
+    public static bool slot0 = false;
     public bool slot1 = false;
     public bool slot2 = false;
     public bool slot3 = false;
