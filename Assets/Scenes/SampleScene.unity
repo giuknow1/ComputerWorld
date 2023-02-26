@@ -1432,6 +1432,38 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 370831873}
   m_CullTransparentMesh: 1
+--- !u!1 &377908135
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 377908136}
+  m_Layer: 0
+  m_Name: Efecto
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &377908136
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 377908135}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -104.726135, y: 41.39856, z: -17.827908}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1620573198}
+  m_Father: {fileID: 1536629308}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &404540502
 GameObject:
   m_ObjectHideFlags: 0
@@ -5962,6 +5994,18 @@ MonoBehaviour:
     pitch: 1
     repetir: 0
     FuenteAudio: {fileID: 0}
+  - Nombre: FastBeat
+    ClipSonido: {fileID: 8300000, guid: fa8231bbe56552a47a07675991d55d64, type: 3}
+    Volumen: 1
+    pitch: 1
+    repetir: 1
+    FuenteAudio: {fileID: 0}
+  - Nombre: SlowBeat
+    ClipSonido: {fileID: 8300000, guid: 0d73eb446429ce14298c006aace99736, type: 3}
+    Volumen: 1
+    pitch: 1
+    repetir: 1
+    FuenteAudio: {fileID: 0}
 --- !u!4 &1288188039
 Transform:
   m_ObjectHideFlags: 0
@@ -6838,6 +6882,7 @@ RectTransform:
   - {fileID: 1398995706}
   - {fileID: 239016462}
   - {fileID: 1384006188}
+  - {fileID: 377908136}
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7208,6 +7253,82 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1579493089}
   m_CullTransparentMesh: 1
+--- !u!1 &1620573197
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1620573198}
+  - component: {fileID: 1620573200}
+  - component: {fileID: 1620573199}
+  m_Layer: 5
+  m_Name: StressEffect
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1620573198
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620573197}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 17.827908}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 377908136}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMax: {x: 1, y: 1}
+  m_AnchoredPosition: {x: 104.726135, y: -41.39856}
+  m_SizeDelta: {x: 1238, y: 670}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1620573199
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620573197}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
+  m_Maskable: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_Sprite: {fileID: 21300000, guid: ad0018903e4830544b53e4629a82f68e, type: 3}
+  m_Type: 0
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+  m_PixelsPerUnitMultiplier: 1
+--- !u!222 &1620573200
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1620573197}
+  m_CullTransparentMesh: 1
 --- !u!1 &1624681040
 GameObject:
   m_ObjectHideFlags: 0
@@ -7527,6 +7648,7 @@ MonoBehaviour:
   control: 1
   control_reb: 1
   casete: 0
+  stressImage: {fileID: 1620573199}
 --- !u!114 &1652853422
 MonoBehaviour:
   m_ObjectHideFlags: 0

@@ -17,6 +17,25 @@ public class Stress : MonoBehaviour
     public bool control_reb = true;
     public bool casete = false;
 
+    public Image stressImage;
+    private float r;
+    private float g;
+    private float b;
+    private float a;
+
+
+
+
+    void Start()
+    {
+      
+
+        r = stressImage.color.r;
+        g = stressImage.color.g;
+        b = stressImage.color.b;
+        a = stressImage.color.a;
+    }
+
     private void Musica()
     {
         if (Input.GetKeyDown(KeyCode.Mouse0) && (activar_evento_radio) && (casete) && (control) && (!rebobinar))
@@ -31,6 +50,7 @@ public class Stress : MonoBehaviour
         } 
         else if (Input.GetKeyDown(KeyCode.Mouse0) && (activar_evento_radio) && (casete) && (control) && (rebobinar) && (control_reb))
         {
+            casete_ref.SetActive(false);
             control_reb = false;
             GestorDeAudio.instancia.ReproducirSonido("Rebobinar");
             StartCoroutine(rebob());
@@ -39,9 +59,15 @@ public class Stress : MonoBehaviour
 
     private void Update()
     {
-        
+
+        a = Mathf.Clamp(a, 0, 1f);
+        Efecto();
+
+
         stress_bar.GetComponent<Slider>().value = stress;
         Musica();
+
+       
         
     }
 
@@ -54,6 +80,8 @@ public class Stress : MonoBehaviour
             if(stress > 0)
             {
                 stress -= 0.1f;
+             
+                a -= 0.002f;
             }
         }
 
@@ -86,6 +114,16 @@ public class Stress : MonoBehaviour
         }
     }
 
+
+    private void Efecto()
+    {
+        Color c = new Color(r, g, b, a);
+        stressImage.color = c;
     }
+    
+ 
+}
+
+    
 
 
