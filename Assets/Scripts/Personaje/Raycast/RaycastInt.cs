@@ -5,8 +5,10 @@ using UnityEngine;
 public class RaycastInt : MonoBehaviour
 {
     public new Transform camera;
-
+    public GameObject cursor;
     public float rayDistance;
+
+    RaycastHit view;
 
     void start()
     {
@@ -16,6 +18,16 @@ public class RaycastInt : MonoBehaviour
     void Update()
     {
         Debug.DrawRay(camera.position, camera.forward * rayDistance, Color.red);
+
+        if (Physics.Raycast(camera.position, camera.forward, out view, rayDistance, LayerMask.GetMask("Interactuable")) || Physics.Raycast(camera.position, camera.forward, out view, rayDistance, LayerMask.GetMask("IntRadio")))
+        {
+            cursor.SetActive(false);
+        } else
+        {
+            cursor.SetActive(true);
+        }
+
+
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
@@ -31,11 +43,13 @@ public class RaycastInt : MonoBehaviour
             if (Physics.Raycast(camera.position, camera.forward, out hit, rayDistance, LayerMask.GetMask("IntRadio")))
             {
                 hit.transform.GetComponent<Audio>().Audio1();
-                //
+                
             }
 
         }
     }
+
+    
 }
 
 

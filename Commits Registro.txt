@@ -68,3 +68,4 @@ COMPUTER WORLD ... COMMITS
 -----DIA 11-----
 36. Agregado nuevo objeto RADIOVINTAGE con script para reproducir sonido.
 37. Agregado Cursor para indicar punto de visualizacion. Modificado script INVENTARIO para que el cursor nu se vea cuando el inventario esta abierto.
+38. Modificado script RaycastInt para que cuando se detecte un obteco intreactuable el cursor cambie de color.
