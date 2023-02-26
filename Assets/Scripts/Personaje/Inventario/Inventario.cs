@@ -48,6 +48,9 @@ public class Inventario : MonoBehaviour
     public bool abrir_inv;
 
     public GameObject Selector;
+    public GameObject Cursor0;
+    public GameObject Cursor1;
+
     public int ID;
    
 
@@ -408,6 +411,8 @@ public class Inventario : MonoBehaviour
 
             inventario.SetActive(true);
             Selector.SetActive(true);
+            Cursor1.SetActive(false);
+            Cursor0.SetActive(false);
 
         }
         else
@@ -415,6 +420,9 @@ public class Inventario : MonoBehaviour
             GestorDeAudio.instancia.ReproducirSonido("Inventario");
             inventario.SetActive(false);
             Selector.SetActive(false);
+            Cursor1.SetActive(true);
+            Cursor0.SetActive(true);
+
             ID = 0;
 
         }
@@ -441,6 +449,7 @@ public class Inventario : MonoBehaviour
                 People.SetActive(false);
 
                 Selector.SetActive(true);
+
                 inv_control = false;
 
             }
