@@ -63,3 +63,7 @@ COMPUTER WORLD ... COMMITS
 33. Agregados nuevos scripts Interactuable y RadioInt (deriva de Interactuable) para las interacciones con el raycast.
 34. Modificado script Stress para que la radio se acxtive mediante el script de Raycast.
 35. Finalizado Objeto Radio. Modificado Script STRESS para que el caset deba rebobinarse al finalizar.
+
+
+-----DIA 11-----
+36. Agregado nuevo objeto RADIOVINTAGE con script para reproducir sonido.

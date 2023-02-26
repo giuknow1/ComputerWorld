@@ -21,6 +21,7 @@ TagManager:
   - Money
   - People
   - Radio
+  - Radio1
   layers:
   - Default
   - TransparentFX
@@ -29,7 +30,7 @@ TagManager:
   - Water
   - UI
   - Interactuable
-  - 
+  - IntRadio
   - 
   - 
   - 
