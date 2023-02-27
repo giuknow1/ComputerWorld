@@ -26,6 +26,9 @@ public class Inventario : MonoBehaviour
     public GameObject Money;
     public GameObject People;
 
+
+ 
+
     public bool slot0 = false;
     public bool slot1 = false;
     public bool slot2 = false;
@@ -78,7 +81,7 @@ public class Inventario : MonoBehaviour
 
         if (inv_coll.CompareTag("Linterna"))
         {
-
+       
             slot2 = true;
             Bolsa[2].GetComponent<Image>().enabled = true;
             Bolsa[2].GetComponent<Image>().sprite = inv_coll.GetComponent<SpriteRenderer>().sprite;
@@ -226,6 +229,7 @@ public class Inventario : MonoBehaviour
 
         if ((slot2 == true) && (Input.GetKeyDown(KeyCode.Q)) && (ID == 2) && (abrir_inv) && (inv_control == false))
         {
+       
             GestorDeAudio.instancia.ReproducirSonido("Inspeccionar");
             linterna.SetActive(true);
             Selector.SetActive(false);
@@ -381,6 +385,9 @@ public class Inventario : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+
+  
+
         casete.SetActive(false);
         calculadora.SetActive(false);
         linterna.SetActive(false);
@@ -404,7 +411,7 @@ public class Inventario : MonoBehaviour
     void Update()
     {
         Slots();
-
+  
         NavegarEnInventario();
 
         if (abrir_inv)
@@ -465,6 +472,7 @@ public class Inventario : MonoBehaviour
 
 
     }
+
 }
 
     

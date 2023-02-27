@@ -5,7 +5,8 @@ using UnityEngine.UI;
 
 public class Colisiones : MonoBehaviour
 {
- 
+    public GameObject flashlight;
+
 
     private void OnTriggerEnter(Collider other)
     {
@@ -23,6 +24,8 @@ public class Colisiones : MonoBehaviour
 
         if (other.gameObject.CompareTag("Linterna") == true)
         {
+
+            flashlight.SetActive(true);
             other.gameObject.SetActive(false);
             GestorDeAudio.instancia.ReproducirSonido("Bag");
         }
@@ -113,7 +116,8 @@ public class Colisiones : MonoBehaviour
         // Start is called before the first frame update
         void Start()
     {
-        
+
+        flashlight.SetActive(false);
     }
 
     // Update is called once per frame
