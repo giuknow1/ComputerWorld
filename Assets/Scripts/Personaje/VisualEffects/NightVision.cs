@@ -7,7 +7,7 @@ public class NightVision : MonoBehaviour
 
     public GameObject NightVisionObject;
     public GameObject Target;
-    public bool NV_estado = false;
+    public static bool NV_estado = false;
 
     void Start()
     {
