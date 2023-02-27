@@ -37,7 +37,7 @@ public class Inventario : MonoBehaviour
     public bool slot8 = false;
     public bool slot9 = false;
     public bool slot10 = false;
-    public bool slot11 = false;
+    public static bool slot11 = false;
     public bool slot12 = false;
     public bool slot13 = false;
     public bool slot14 = false;
@@ -48,6 +48,7 @@ public class Inventario : MonoBehaviour
     public bool abrir_inv;
 
     public GameObject Selector;
+
     public GameObject Cursor0;
     public GameObject Cursor1;
 

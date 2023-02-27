@@ -16,6 +16,7 @@ public class Stress : MonoBehaviour
     public bool control = true;
     public bool control_reb = true;
     public bool casete = false;
+    public bool insert = true;
 
     public Image stressImage;
     private float r;
@@ -38,22 +39,31 @@ public class Stress : MonoBehaviour
 
     private void Musica()
     {
-        if (Input.GetKeyDown(KeyCode.Mouse0) && (activar_evento_radio) && (casete) && (control) && (!rebobinar))
+        
+
+        if (Input.GetKeyDown(KeyCode.Mouse0) && (activar_evento_radio) && (casete) && (control) && (!rebobinar) && (!insert))
         {
             control = false;
             activar_evento_radio = false;
             reduccion = true;
             GestorDeAudio.instancia.ReproducirSonido("Computer World");
-            casete_ref.SetActive(false);
             StartCoroutine(time());
             StartCoroutine(MSC());
         } 
-        else if (Input.GetKeyDown(KeyCode.Mouse0) && (activar_evento_radio) && (casete) && (control) && (rebobinar) && (control_reb))
+        else if (Input.GetKeyDown(KeyCode.Mouse0) && (activar_evento_radio) && (casete) && (control) && (rebobinar) && (control_reb) && (!insert))
         {
             casete_ref.SetActive(false);
             control_reb = false;
             GestorDeAudio.instancia.ReproducirSonido("Rebobinar");
             StartCoroutine(rebob());
+        }
+
+        if (Input.GetKeyDown(KeyCode.Mouse0) && (activar_evento_radio) && (casete) && (control) && (insert))
+        {
+            casete_ref.SetActive(false);
+            GestorDeAudio.instancia.ReproducirSonido("Insert");
+            insert = false;
+
         }
     }
 
@@ -94,6 +104,7 @@ public class Stress : MonoBehaviour
         control = true;
         casete_ref.SetActive(true);
         rebobinar = true;
+        insert = true;
         control_reb = true;
     }
 
