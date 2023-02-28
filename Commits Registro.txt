@@ -77,3 +77,6 @@ COMPUTER WORLD ... COMMITS
 41. Agregado efecto de BlackOut.
 42. Agregado Script Linterna para activar y desactivar la luz de la linterna.
 43. Agregada PointLight para indicar cuando la linterna esta encendida/apagada.
+
+-----DIA 13-----
+44. Modificado Script LINTERNA para desvelar objetos ocultos al alumbrar con la luz ultravioleta.

@@ -8,11 +8,20 @@ public class Linterna : MonoBehaviour
     public Light luzLinterna;
     public bool estado = false;
 
+    public new Transform camera;
+   
+    public float rayDistance;
+
+    public GameObject secret1;
+
+
+    RaycastHit view;
 
     void Start()
     {
-        
-       
+        camera = transform.Find("Camara Jugador");
+        secret1.SetActive(false);
+
         luzLinterna.enabled = false;
 
         foco.enabled = false;
@@ -20,8 +29,6 @@ public class Linterna : MonoBehaviour
 
     void Update()
     {
-
-        
 
         if (Input.GetKeyDown(KeyCode.F))
         {
@@ -39,6 +46,24 @@ public class Linterna : MonoBehaviour
                 luzLinterna.enabled = false;
             }
         }
+
+        Debug.DrawRay(camera.position, camera.forward * rayDistance, Color.red);
+
+        if (Physics.Raycast(camera.position, camera.forward, out view, rayDistance, LayerMask.GetMask("Secret")) && (estado))
+        {
+            secret1.SetActive(true);
+        }
+        else
+        {
+            secret1.SetActive(false);
+        }
+
+        //
+
+       
+
+
+
     }
 
  

@@ -8,11 +8,13 @@ public class RaycastInt : MonoBehaviour
     public GameObject cursor;
     public float rayDistance;
 
+
     RaycastHit view;
 
     void start()
     {
         camera = transform.Find("Camara Jugador");
+     
     }
 
     void Update()
@@ -46,6 +48,7 @@ public class RaycastInt : MonoBehaviour
                 
             }
 
+        
         }
     }
 
