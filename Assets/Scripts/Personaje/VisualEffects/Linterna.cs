@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Linterna : MonoBehaviour
 {
-    
+    public Light foco;
     public Light luzLinterna;
     public bool estado = false;
 
@@ -14,6 +14,8 @@ public class Linterna : MonoBehaviour
         
        
         luzLinterna.enabled = false;
+
+        foco.enabled = false;
     }
 
     void Update()
@@ -28,10 +30,12 @@ public class Linterna : MonoBehaviour
 
             if (estado)
             {
+                foco.enabled = true;
                 luzLinterna.enabled = true;
             }
             else
             {
+                foco.enabled = false;
                 luzLinterna.enabled = false;
             }
         }
