@@ -7,6 +7,7 @@ public class Darkness : MonoBehaviour
 
     public GameObject Darkness_effect;
     public bool Activar = false;
+    public static bool Activarfirst = false;
 
 
     void Start()
@@ -18,7 +19,13 @@ public class Darkness : MonoBehaviour
     void Update()
     {
 
-        ActivarDark();
+
+        if (Activarfirst)
+        {
+           
+            Darkness_effect.SetActive(true);
+            Activar = true;
+        }
 
         if (Activar) {
 
@@ -31,13 +38,6 @@ public class Darkness : MonoBehaviour
         } 
     }
 
-    public void ActivarDark()
-    {
-        if (Input.GetKeyDown(KeyCode.M) && !Activar)
-        {
-            GestorDeAudio.instancia.ReproducirSonido("BlackOut");
-            Activar = true;
-        }
-    }
+    
 
 }

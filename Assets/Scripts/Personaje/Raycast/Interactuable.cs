@@ -20,3 +20,37 @@ public class Interactuable : MonoBehaviour
     }
     
 }
+
+
+public class TornillosCaja : MonoBehaviour
+{
+
+    public virtual void Tornillo()
+    {
+
+    }
+
+    public virtual void Tornillo2()
+    {
+
+    }
+
+    public virtual void Tornillo3()
+    {
+
+    }
+    public virtual void Tornillo4()
+    {
+
+    }
+
+}
+
+public class Cables : MonoBehaviour
+{
+
+    public virtual void Wires()
+    {
+
+    }
+}

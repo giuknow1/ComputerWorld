@@ -8,6 +8,11 @@ public class RaycastInt : MonoBehaviour
     public GameObject cursor;
     public float rayDistance;
 
+    public bool vent = false;
+
+    public GameObject caja;
+
+    public int contador = 4;
 
     RaycastHit view;
 
@@ -40,15 +45,60 @@ public class RaycastInt : MonoBehaviour
                 hit.transform.GetComponent<Interactuable>().Radio();
             }
 
-           
-
             if (Physics.Raycast(camera.position, camera.forward, out hit, rayDistance, LayerMask.GetMask("IntRadio")))
             {
                 hit.transform.GetComponent<Audio>().Audio1();
                 
             }
 
-        
+            if (Physics.Raycast(camera.position, camera.forward, out hit, rayDistance, LayerMask.GetMask("Tornillo")))
+            {
+               
+                hit.transform.GetComponent<TornillosCaja>().Tornillo();
+                contador--;
+
+            }
+
+            if (Physics.Raycast(camera.position, camera.forward, out hit, rayDistance, LayerMask.GetMask("Tornillo2")))
+            {
+
+                hit.transform.GetComponent<TornillosCaja>().Tornillo2();
+                contador--;
+
+            }
+
+            if (Physics.Raycast(camera.position, camera.forward, out hit, rayDistance, LayerMask.GetMask("Tornillo3")))
+            {
+
+                hit.transform.GetComponent<TornillosCaja>().Tornillo3();
+                contador--;
+            }
+
+            if (Physics.Raycast(camera.position, camera.forward, out hit, rayDistance, LayerMask.GetMask("Tornillo4")))
+            {
+
+                hit.transform.GetComponent<TornillosCaja>().Tornillo4();
+                contador--;
+
+            }
+
+
+            if (Physics.Raycast(camera.position, camera.forward, out hit, rayDistance, LayerMask.GetMask("Cable")))
+            {
+
+                hit.transform.GetComponent<Cables>().Wires();
+              
+            }
+
+
+            if (contador == 0 && vent == false)
+            {
+                vent = true;
+                caja.SetActive(false);
+                GestorDeAudio.instancia.ReproducirSonido("Vent");
+            }
+
+
         }
     }
 
