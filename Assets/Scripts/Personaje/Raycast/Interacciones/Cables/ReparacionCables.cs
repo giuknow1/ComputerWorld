@@ -25,34 +25,35 @@ public class ReparacionCables : RepCables
         if (rep == 5)
             {
                 cablerep1.SetActive(true);
-              
-            } else
+            GestorDeAudio.instancia.ReproducirSonido("Cinta");
+        } else
 
             if (rep == 4)
             {
-             
-                cablerep2.SetActive(true);
+            GestorDeAudio.instancia.ReproducirSonido("Cinta");
+            cablerep2.SetActive(true);
             } else
 
             if (rep == 3)
             {
-               
-                cablerep3.SetActive(true);
+            GestorDeAudio.instancia.ReproducirSonido("Cinta");
+            cablerep3.SetActive(true);
             } else
 
             if (rep == 2)
             {
-               
-                cablerep4.SetActive(true);
+            GestorDeAudio.instancia.ReproducirSonido("Cinta");
+            cablerep4.SetActive(true);
             } else
 
             if (rep == 1)
             {
-              
-                cablerep5.SetActive(true);
+            GestorDeAudio.instancia.ReproducirSonido("Cinta");
+            cablerep5.SetActive(true);
             Dark.SetActive(false);
             FinDark = true;
             GestorDeAudio.instancia.ReproducirSonido("LightOn");
+            GestorDeAudio.instancia.ReproducirSonido("TurnOn");
         }
 
         

@@ -86,3 +86,4 @@ COMPUTER WORLD ... COMMITS
 
 ----DIA 14----
 47. Agregada funcion para reparar cables y encender la luz. Script nuevo (Reparacion Cables).
+48. Agregados sonidos a la reparacion de cables y Modificado scriot RAYCASTINT para que ciertas funciones (Quitar tornillos y reparar cables) solo puedan realizarse teniendo su item correspondiente en el inventario.

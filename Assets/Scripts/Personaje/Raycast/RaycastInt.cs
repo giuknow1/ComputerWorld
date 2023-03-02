@@ -58,7 +58,7 @@ public class RaycastInt : MonoBehaviour
                 
             }
 
-            if (Physics.Raycast(camera.position, camera.forward, out hit, rayDistance, LayerMask.GetMask("Tornillo")))
+            if (Physics.Raycast(camera.position, camera.forward, out hit, rayDistance, LayerMask.GetMask("Tornillo")) && Inventario.slot4 == true)
             {
                
                 hit.transform.GetComponent<TornillosCaja>().Tornillo();
@@ -66,7 +66,7 @@ public class RaycastInt : MonoBehaviour
 
             }
 
-            if (Physics.Raycast(camera.position, camera.forward, out hit, rayDistance, LayerMask.GetMask("Tornillo2")))
+            if (Physics.Raycast(camera.position, camera.forward, out hit, rayDistance, LayerMask.GetMask("Tornillo2")) && Inventario.slot4 == true)
             {
 
                 hit.transform.GetComponent<TornillosCaja>().Tornillo2();
@@ -74,14 +74,14 @@ public class RaycastInt : MonoBehaviour
 
             }
 
-            if (Physics.Raycast(camera.position, camera.forward, out hit, rayDistance, LayerMask.GetMask("Tornillo3")))
+            if (Physics.Raycast(camera.position, camera.forward, out hit, rayDistance, LayerMask.GetMask("Tornillo3")) && Inventario.slot4 == true)
             {
 
                 hit.transform.GetComponent<TornillosCaja>().Tornillo3();
                 contador--;
             }
 
-            if (Physics.Raycast(camera.position, camera.forward, out hit, rayDistance, LayerMask.GetMask("Tornillo4")))
+            if (Physics.Raycast(camera.position, camera.forward, out hit, rayDistance, LayerMask.GetMask("Tornillo4")) && Inventario.slot4 == true)
             {
 
                 hit.transform.GetComponent<TornillosCaja>().Tornillo4();
@@ -90,7 +90,7 @@ public class RaycastInt : MonoBehaviour
             }
 
 
-            if (Physics.Raycast(camera.position, camera.forward, out hit, rayDistance, LayerMask.GetMask("Cable")))
+            if (Physics.Raycast(camera.position, camera.forward, out hit, rayDistance, LayerMask.GetMask("Cable")) && contador == 0)
             {
 
                 hit.transform.GetComponent<Cables>().Wires();
@@ -105,7 +105,7 @@ public class RaycastInt : MonoBehaviour
                 GestorDeAudio.instancia.ReproducirSonido("Vent");
             }
 
-            if (Physics.Raycast(camera.position, camera.forward, out hit, rayDistance, LayerMask.GetMask("CableRep")))
+            if (Physics.Raycast(camera.position, camera.forward, out hit, rayDistance, LayerMask.GetMask("CableRep")) && Inventario.slot5 == true)
             {
                 if (Cableado.reparacion == 1)
                 {
