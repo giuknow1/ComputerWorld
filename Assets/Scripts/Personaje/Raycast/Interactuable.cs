@@ -54,3 +54,11 @@ public class Cables : MonoBehaviour
 
     }
 }
+
+public class RepCables : MonoBehaviour
+{
+    public virtual void Reparacion()
+    {
+
+    }
+}

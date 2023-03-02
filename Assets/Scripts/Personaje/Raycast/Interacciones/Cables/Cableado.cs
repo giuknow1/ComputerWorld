@@ -10,8 +10,9 @@ public class Cableado : Cables
     public GameObject cable4;
     public GameObject cable5;
 
-
+    public static int reparacion = 0;
     public static int cablescont = 5;
+    
 
         public override void Wires()
         {
@@ -41,9 +42,12 @@ public class Cableado : Cables
 
         if (cablescont == 0)
         {
+            reparacion = 1;
             cable5.SetActive(false);
             Darkness.Activarfirst = true;
             GestorDeAudio.instancia.ReproducirSonido("BlackOut");
         }
+
+
     }
     }

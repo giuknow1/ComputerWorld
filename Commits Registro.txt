@@ -82,3 +82,7 @@ COMPUTER WORLD ... COMMITS
 44. Modificado Script LINTERNA para desvelar objetos ocultos al alumbrar con la luz ultravioleta.
 45. Creado Modelo de sistema electrico con ProBuilder
 46. Agregada interaccion con Sistem Electrico para quitar la puerta y cortar los cables.
+
+
+----DIA 14----
+47. Agregada funcion para reparar cables y encender la luz. Script nuevo (Reparacion Cables).

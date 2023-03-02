@@ -22,14 +22,14 @@ public class Darkness : MonoBehaviour
 
         if (Activarfirst)
         {
-           
+            Activarfirst = false;
             Darkness_effect.SetActive(true);
             Activar = true;
         }
 
         if (Activar) {
 
-            if (!NightVision.NV_estado)
+            if (!NightVision.NV_estado && !ReparacionCables.FinDark)
             {
 
                 Darkness_effect.SetActive(true);
