@@ -113,6 +113,31 @@ public class RaycastInt : MonoBehaviour
                 }
             }
 
+            if (Physics.Raycast(camera.position, camera.forward, out hit, rayDistance, LayerMask.GetMask("LockerDoor1")))
+            {
+
+                hit.transform.GetComponent<Lockers>().abrirLocker1();
+              
+
+            }
+
+            if (Physics.Raycast(camera.position, camera.forward, out hit, rayDistance, LayerMask.GetMask("LockerDoor2")))
+            {
+
+                hit.transform.GetComponent<Lockers>().abrirLocker2();
+                
+
+            }
+
+            if (Physics.Raycast(camera.position, camera.forward, out hit, rayDistance, LayerMask.GetMask("LockerDoor3")))
+            {
+
+                hit.transform.GetComponent<Lockers>().abrirLocker3();
+               
+
+            }
+
+
 
         }
     }

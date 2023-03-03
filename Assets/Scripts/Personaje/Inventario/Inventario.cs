@@ -37,8 +37,8 @@ public class Inventario : MonoBehaviour
     public static bool slot5 = false;
     public bool slot6 = false;
     public bool slot7 = false;
-    public bool slot8 = false;
-    public bool slot9 = false;
+    public static bool slot8 = false;
+    public static bool slot9 = false;
     public bool slot10 = false;
     public static bool slot11 = false;
     public bool slot12 = false;

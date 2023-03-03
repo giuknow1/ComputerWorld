@@ -61,4 +61,27 @@ public class RepCables : MonoBehaviour
     {
 
     }
+
 }
+
+    public class Lockers : MonoBehaviour
+    {
+        public virtual void abrirLocker1()
+        {
+
+        }
+        public virtual void abrirLocker2()
+        {
+
+
+
+        }
+
+        public virtual void abrirLocker3()
+        {
+
+        }
+
+
+    }
+
