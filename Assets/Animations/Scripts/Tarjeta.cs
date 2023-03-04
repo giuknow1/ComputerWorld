@@ -6,24 +6,31 @@ public class Tarjeta : MonoBehaviour
 {
     public Animator Left;
     public Animator Right;
-    
+    public AudioClip Puerta;
+    public bool estado = true;
 
         public void OnTriggerEnter(Collider other)
         {
-            if (other.gameObject.CompareTag("TDoor") == true)
+            if (other.gameObject.CompareTag("TDoor") == true && (estado) && (Inventario.slot6))
             {
-                Left.Play("LeftTarjeta");
+            estado = false;
+            AudioSource.PlayClipAtPoint(Puerta, transform.position, 0.5f);
+            Left.Play("LeftTarjeta");
                 Right.Play("RightTarjeta");
-            }
+            StartCoroutine(Animation());
+           
+        }
         }
 
-    public void OnTriggerExit(Collider other)
+
+
+
+    IEnumerator Animation()
     {
-        if (other.gameObject.CompareTag("TDoor") == true)
-        {
-            Left.Play("LT2");
-            Right.Play("RT2");
-        }
+        yield return new WaitForSeconds(4.5f);
+        Left.Play("LT2");
+        Right.Play("RT2");
+        estado = true;
     }
 
 }
