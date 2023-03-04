@@ -22,6 +22,7 @@ TagManager:
   - People
   - Radio
   - Radio1
+  - TDoor
   layers:
   - Default
   - TransparentFX
@@ -43,7 +44,7 @@ TagManager:
   - LockerDoor1
   - LockerDoor2
   - LockerDoor3
-  - 
+  - Door
   - 
   - 
   - 

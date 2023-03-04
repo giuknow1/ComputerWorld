@@ -137,6 +137,13 @@ public class RaycastInt : MonoBehaviour
 
             }
 
+            if (Physics.Raycast(camera.position, camera.forward, out hit, rayDistance, LayerMask.GetMask("Door")))
+            {
+                hit.transform.GetComponent<Door>().estadoDoor();
+
+            }
+
+
 
 
         }

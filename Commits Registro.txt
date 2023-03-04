@@ -92,3 +92,4 @@ COMPUTER WORLD ... COMMITS
 
 -----DIA 15-----
 49. Agregados Lockers + Script para interactuar y abrirlos. (Se enecesitan llaves para abrir los Lockers).
+50. Agregadas dos puertas (Porton y puerta con tarjeta) con animaciones y scripts para abrir y cerrarse.

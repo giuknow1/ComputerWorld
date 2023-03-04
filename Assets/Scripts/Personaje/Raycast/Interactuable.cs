@@ -85,3 +85,14 @@ public class RepCables : MonoBehaviour
 
     }
 
+
+public class Door : MonoBehaviour
+{
+    public virtual void estadoDoor()
+    {
+
+    }
+
+  
+}
+
