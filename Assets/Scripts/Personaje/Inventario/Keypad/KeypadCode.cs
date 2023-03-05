@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class KeypadCode : MonoBehaviour
 {
     [SerializeField] private Text Ans;
+    public GameObject keypad;
+
 
     public string answer = "1234";
 
@@ -44,5 +46,11 @@ public class KeypadCode : MonoBehaviour
         Ans.text = "";
     }
 
+
+    public void Close()
+    {
+        GestorDeAudio.instancia.ReproducirSonido("Key");
+        keypad.SetActive(false);
+    }
 
 }
