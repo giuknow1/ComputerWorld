@@ -94,3 +94,7 @@ COMPUTER WORLD ... COMMITS
 49. Agregados Lockers + Script para interactuar y abrirlos. (Se enecesitan llaves para abrir los Lockers).
 50. Agregadas dos puertas (Porton y puerta con tarjeta) con animaciones y scripts para abrir y cerrarse.
 51. Agregados sonidos a la puerta con tarjeta.
+
+
+-----DIA 16-----
+52. Mejorado el aspecto de Inspeccion de objeto.

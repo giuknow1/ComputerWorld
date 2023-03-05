@@ -90,7 +90,7 @@ public class RaycastInt : MonoBehaviour
             }
 
 
-            if (Physics.Raycast(camera.position, camera.forward, out hit, rayDistance, LayerMask.GetMask("Cable")) && contador == 0)
+            if (Physics.Raycast(camera.position, camera.forward, out hit, rayDistance, LayerMask.GetMask("Cable")) && contador == 0 && (Inventario.slot1))
             {
 
                 hit.transform.GetComponent<Cables>().Wires();
