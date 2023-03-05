@@ -30,6 +30,8 @@ public class KeypadCode : MonoBehaviour
             Ans.text = "ERROR";
             GestorDeAudio.instancia.ReproducirSonido("Error");
             StartCoroutine(time());
+            Stress.stress += 10f;
+            Stress.a += 0.1f;
         }
     }
 

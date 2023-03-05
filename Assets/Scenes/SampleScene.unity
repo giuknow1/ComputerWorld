@@ -22698,7 +22698,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!224 &1620573198
 RectTransform:
   m_ObjectHideFlags: 0
@@ -23093,7 +23093,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   stress_bar: {fileID: 1330185836}
-  stress: 100
   reduccion: 0
   casete_ref: {fileID: 1568186300}
   rebobinar: 0

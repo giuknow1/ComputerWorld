@@ -6,7 +6,7 @@ using UnityEngine.UI;
 public class Stress : MonoBehaviour
 {
     public Slider stress_bar;
-    public float stress = 100f;
+    public static float stress = 0f;
     public bool reduccion = false;
     public GameObject casete_ref;
     public static bool activar_evento_radio = false;
@@ -22,7 +22,7 @@ public class Stress : MonoBehaviour
     private float r;
     private float g;
     private float b;
-    private float a;
+    public static float a;
 
 
 
@@ -35,6 +35,7 @@ public class Stress : MonoBehaviour
         g = stressImage.color.g;
         b = stressImage.color.b;
         a = stressImage.color.a;
+        a = 0.0f;
     }
 
     private void Musica()
@@ -91,7 +92,7 @@ public class Stress : MonoBehaviour
             {
                 stress -= 0.1f;
              
-                a -= 0.002f;
+                a -= 0.001f;
             }
         }
 

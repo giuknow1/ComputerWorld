@@ -100,3 +100,4 @@ COMPUTER WORLD ... COMMITS
 52. Mejorado el aspecto de Inspeccion de objeto.
 53. Agregado Keypad para escribir un codigo y verificarlo (Script Keypad). 
 54. Modificado script Keypad para que el Keypad se cierre al clickear sobre la "X".
+55. Modificado script Keypad para que aumente el nivel de estres cuando el Check da error.
