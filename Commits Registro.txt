@@ -70,7 +70,7 @@ COMPUTER WORLD ... COMMITS
 37. Agregado Cursor para indicar punto de visualizacion. Modificado script INVENTARIO para que el cursor nu se vea cuando el inventario esta abierto.
 38. Modificado script RaycastInt para que cuando se detecte un obteco intreactuable el cursor cambie de color.
 39. Agregado efecto de estres en la pantalla que se disminuye con la musica.
-40. Agregado Script NIGHTVISION para acxtivar efecto post procesado con tematica de vision nocturna.
+40. Agregado Script NIGHTVISION para acxtivar efecto post processing con tematica de vision nocturna.
 
 
 -----DIA 12-----
@@ -98,3 +98,4 @@ COMPUTER WORLD ... COMMITS
 
 -----DIA 16-----
 52. Mejorado el aspecto de Inspeccion de objeto.
+53. Agregado Keypad para escribir un codigo y verificarlo (Script Keypad). 
