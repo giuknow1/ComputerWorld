@@ -8,8 +8,15 @@ public class KeypadCode : MonoBehaviour
     [SerializeField] private Text Ans;
     public GameObject keypad;
 
+    public Animator Porton3;
 
     public string answer = "1234";
+
+
+    void Update()
+    {
+       
+    }
 
     public void Number(int num)
     {
@@ -19,10 +26,12 @@ public class KeypadCode : MonoBehaviour
 
     public void Execute()
     {
-       
+        PortonIII();
+
         if (Ans.text == answer)
         {
-         
+           
+
             GestorDeAudio.instancia.ReproducirSonido("Correct");
             keypad.SetActive(false);
             Ans.text = "";
@@ -56,6 +65,18 @@ public class KeypadCode : MonoBehaviour
         GestorDeAudio.instancia.ReproducirSonido("Key");
         keypad.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
+    }
+
+ public void PortonIII()
+    {
+        if (Ans.text == "911")
+        {
+            Porton3.Play("Porton3");
+            GestorDeAudio.instancia.ReproducirSonido("Gate");
+            GestorDeAudio.instancia.ReproducirSonido("Correct");
+            keypad.SetActive(false);
+            Ans.text = "";
+        }
     }
 
 }

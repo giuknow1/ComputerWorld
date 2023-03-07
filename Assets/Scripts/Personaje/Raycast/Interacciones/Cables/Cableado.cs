@@ -10,6 +10,8 @@ public class Cableado : Cables
     public GameObject cable4;
     public GameObject cable5;
 
+    public Animator Door;
+
     public static int reparacion = 0;
     public static int cablescont = 5;
     
@@ -46,6 +48,7 @@ public class Cableado : Cables
             cable5.SetActive(false);
             Darkness.Activarfirst = true;
             GestorDeAudio.instancia.ReproducirSonido("BlackOut");
+            Door.Play("AbrirPorton");
         }
 
 
