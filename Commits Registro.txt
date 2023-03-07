@@ -110,3 +110,4 @@ COMPUTER WORLD ... COMMITS
 59. Agregados Tachos de Basura (decorativo)
 60. Agregados elementos decorativos a Deposito
 61. Agregadas nuevas animaciones a dos puertas (Deposito & Porton3)
+62. Agregados elementos decorativos a la sala central.
