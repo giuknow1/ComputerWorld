@@ -105,4 +105,5 @@ COMPUTER WORLD ... COMMITS
 
 -----DIA 17-----
 56. Agregadas Texturas de Ciencia Ficcion.
-67. Creado Escenario del Nivel. Sin decoraciones ni texturas.
+57. Creado Escenario del Nivel. Sin decoraciones ni texturas.
+58. Agregados elementos decorativos a la Locker Room.
