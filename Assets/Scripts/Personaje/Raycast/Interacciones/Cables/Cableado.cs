@@ -49,6 +49,7 @@ public class Cableado : Cables
             Darkness.Activarfirst = true;
             GestorDeAudio.instancia.ReproducirSonido("BlackOut");
             Door.Play("AbrirPorton");
+            GestorDeAudio.instancia.ReproducirSonido("Gate");
         }
 
 

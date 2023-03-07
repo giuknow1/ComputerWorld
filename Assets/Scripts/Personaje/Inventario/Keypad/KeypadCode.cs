@@ -35,6 +35,7 @@ public class KeypadCode : MonoBehaviour
             GestorDeAudio.instancia.ReproducirSonido("Correct");
             keypad.SetActive(false);
             Ans.text = "";
+            Cursor.lockState = CursorLockMode.Locked;
         }
         else
         {
@@ -76,6 +77,7 @@ public class KeypadCode : MonoBehaviour
             GestorDeAudio.instancia.ReproducirSonido("Correct");
             keypad.SetActive(false);
             Ans.text = "";
+            Cursor.lockState = CursorLockMode.Locked;
         }
     }
 
