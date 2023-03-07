@@ -22,8 +22,10 @@ public class KeypadCode : MonoBehaviour
        
         if (Ans.text == answer)
         {
-            Ans.text = "CORERECTO";
+         
             GestorDeAudio.instancia.ReproducirSonido("Correct");
+            keypad.SetActive(false);
+            Ans.text = "";
         }
         else
         {
@@ -53,6 +55,7 @@ public class KeypadCode : MonoBehaviour
     {
         GestorDeAudio.instancia.ReproducirSonido("Key");
         keypad.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
 }

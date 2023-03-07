@@ -101,3 +101,8 @@ COMPUTER WORLD ... COMMITS
 53. Agregado Keypad para escribir un codigo y verificarlo (Script Keypad). 
 54. Modificado script Keypad para que el Keypad se cierre al clickear sobre la "X".
 55. Modificado script Keypad para que aumente el nivel de estres cuando el Check da error.
+
+
+-----DIA 17-----
+56. Agregadas Texturas de Ciencia Ficcion.
+67. Creado Escenario del Nivel. Sin decoraciones ni texturas.

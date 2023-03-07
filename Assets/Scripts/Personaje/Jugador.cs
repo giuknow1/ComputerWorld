@@ -6,7 +6,7 @@ public class Jugador : MonoBehaviour
     public float v_mov = 10.0f;
     public bool canMove = true;
     public bool can2 = false;
-
+    public GameObject Pad;
 
     public void ControlMovimiento ()
     {
@@ -50,6 +50,7 @@ public class Jugador : MonoBehaviour
 
     void Update()
     {
+        PAD();
         Freeze();
         ControlMovimiento();
 
@@ -65,4 +66,13 @@ public class Jugador : MonoBehaviour
             }
         }
     
+    //Temporal
+    public void PAD()
+    {
+        if (Input.GetKeyDown(KeyCode.K))
+        {
+            Pad.SetActive(true);
+            Cursor.lockState = CursorLockMode.None;
+        }
+    }
 }
