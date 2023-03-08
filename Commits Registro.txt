@@ -113,3 +113,7 @@ COMPUTER WORLD ... COMMITS
 62. Agregados elementos decorativos a la sala central.
 63. Agregados Elementos decorativos a la sala de Personal.
 64. Agregados Elementos decorativos a Oficina.
+
+
+-----DIA 18-----
+65. Agregados elementos decorativo a Office Room y Toilet.
