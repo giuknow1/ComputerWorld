@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Darkness : MonoBehaviour
 {
-
+    
     public GameObject Darkness_effect;
     public bool Activar = false;
     public static bool Activarfirst = false;

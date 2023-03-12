@@ -9,9 +9,17 @@ public class KeypadCode : MonoBehaviour
     public GameObject keypad;
 
     public Animator Porton3;
+    public Animator Porton1;
+    public Animator Bath;
+
+    public GameObject Numbers;
 
     public string answer = "1234";
 
+    void Start()
+    {
+        Numbers.SetActive(false);
+    }
 
     void Update()
     {
@@ -26,7 +34,7 @@ public class KeypadCode : MonoBehaviour
 
     public void Execute()
     {
-        PortonIII();
+      
 
         if (Ans.text == answer)
         {
@@ -37,7 +45,49 @@ public class KeypadCode : MonoBehaviour
             Ans.text = "";
             Cursor.lockState = CursorLockMode.Locked;
         }
+        else if (Ans.text == "1981")
+        {
+
+            GestorDeAudio.instancia.ReproducirSonido("Correct");
+            keypad.SetActive(false);
+            Ans.text = "";
+            Cursor.lockState = CursorLockMode.Locked;
+            Porton1.Play("Porton1");
+            GestorDeAudio.instancia.ReproducirSonido("Gate");
+        }
+        else if (Ans.text == "1357")
+        {
+            Porton3.Play("Porton3");
+            GestorDeAudio.instancia.ReproducirSonido("Gate");
+            GestorDeAudio.instancia.ReproducirSonido("Correct");
+            keypad.SetActive(false);
+            Ans.text = "";
+            Cursor.lockState = CursorLockMode.Locked;
+
+        } else if (Ans.text == "4273")
+        {
+
+            GestorDeAudio.instancia.ReproducirSonido("Vent");
+            GestorDeAudio.instancia.ReproducirSonido("Correct");
+            keypad.SetActive(false);
+            Ans.text = "";
+            Cursor.lockState = CursorLockMode.Locked;
+            Numbers.SetActive(true);
+
+        }
+        else if (Ans.text == "41")
+        {
+
+            
+            GestorDeAudio.instancia.ReproducirSonido("Correct");
+            keypad.SetActive(false);
+            Ans.text = "";
+            Cursor.lockState = CursorLockMode.Locked;
+            Bath.Play("BathDoor");
+
+        }
         else
+
         {
             Ans.text = "ERROR";
             GestorDeAudio.instancia.ReproducirSonido("Error");
@@ -66,19 +116,6 @@ public class KeypadCode : MonoBehaviour
         GestorDeAudio.instancia.ReproducirSonido("Key");
         keypad.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
-    }
-
- public void PortonIII()
-    {
-        if (Ans.text == "911")
-        {
-            Porton3.Play("Porton3");
-            GestorDeAudio.instancia.ReproducirSonido("Gate");
-            GestorDeAudio.instancia.ReproducirSonido("Correct");
-            keypad.SetActive(false);
-            Ans.text = "";
-            Cursor.lockState = CursorLockMode.Locked;
-        }
     }
 
 }

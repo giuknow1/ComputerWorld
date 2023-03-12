@@ -16,6 +16,7 @@ public class ReparacionCables : RepCables
 
     public Animator Porton3;
     public Animator Errordoor;
+    public Animator Close;
 
     public GameObject Dark;
 
@@ -59,6 +60,7 @@ public class ReparacionCables : RepCables
             Errordoor.Play("ErrorDoor");
             GestorDeAudio.instancia.ReproducirSonido("Gate");
             Porton3.Play("Porton3");
+            Close.Play("Porton4 Close");
         }
 
         

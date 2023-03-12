@@ -117,3 +117,7 @@ COMPUTER WORLD ... COMMITS
 
 -----DIA 18-----
 65. Agregados elementos decorativo a Office Room y Toilet.
+
+
+-----DIA 19-----
+66. Agregadas animaciones a los portones de la zona central del juego.

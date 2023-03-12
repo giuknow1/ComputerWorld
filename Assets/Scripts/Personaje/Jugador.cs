@@ -12,7 +12,7 @@ public class Jugador : MonoBehaviour
     {
         if (canMove == true)
         {
-            v_mov = 10.0f;
+            v_mov = 5.0f;
         }
 
         if (canMove == false)
