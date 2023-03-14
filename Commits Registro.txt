@@ -124,3 +124,4 @@ COMPUTER WORLD ... COMMITS
 
 ----DIA 20----
 67. Agregada animacion a la puerta del final y otros detalles menores.
+68. Importadas texturas para el suelo y las paredes
