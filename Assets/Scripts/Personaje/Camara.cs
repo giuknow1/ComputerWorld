@@ -25,7 +25,7 @@ public class Camara : MonoBehaviour
     {
       
 
-        if (control_camara == false && Jugador.padactive == false && Jugador.inv == false)
+        if (control_camara == false && Jugador.padactive == false && Jugador.inv == false && Menu.menu_screen == false)
         {
             var md = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));
             md = Vector2.Scale(md, new Vector2(sensibilidad * suavizado, sensibilidad * suavizado));

@@ -12,6 +12,7 @@ public class Porton : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.P) && (estado))
         {
             porton.Play("Start");
+            GestorDeAudio.instancia.ReproducirSonido("Ambiance");
             GestorDeAudio.instancia.ReproducirSonido("Gate");
             estado = false;
         }

@@ -414,7 +414,7 @@ public class Inventario : MonoBehaviour
   
         NavegarEnInventario();
 
-        if (abrir_inv)
+        if (abrir_inv && Menu.menu_screen == false)
         {
             Jugador.inv = true;
             inventario.SetActive(true);

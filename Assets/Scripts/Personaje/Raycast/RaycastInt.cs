@@ -33,7 +33,9 @@ public class RaycastInt : MonoBehaviour
         if (Physics.Raycast(camera.position, camera.forward, out view, rayDistance, LayerMask.GetMask("Interactuable")) || Physics.Raycast(camera.position, camera.forward, out view, rayDistance, LayerMask.GetMask("IntRadio")) ||
             Physics.Raycast(camera.position, camera.forward, out view, rayDistance, LayerMask.GetMask("Tornillo")) || Physics.Raycast(camera.position, camera.forward, out view, rayDistance, LayerMask.GetMask("Tornillo2")) ||
             Physics.Raycast(camera.position, camera.forward, out view, rayDistance, LayerMask.GetMask("Tornillo3")) || Physics.Raycast(camera.position, camera.forward, out view, rayDistance, LayerMask.GetMask("Tornillo4")) ||
-            Physics.Raycast(camera.position, camera.forward, out view, rayDistance, LayerMask.GetMask("Cable")) || Physics.Raycast(camera.position, camera.forward, out view, rayDistance, LayerMask.GetMask("CableRep")) )
+            Physics.Raycast(camera.position, camera.forward, out view, rayDistance, LayerMask.GetMask("Cable")) || Physics.Raycast(camera.position, camera.forward, out view, rayDistance, LayerMask.GetMask("CableRep"))
+            || Physics.Raycast(camera.position, camera.forward, out view, rayDistance, LayerMask.GetMask("LockerDoor1")) || Physics.Raycast(camera.position, camera.forward, out view, rayDistance, LayerMask.GetMask("LockerDoor2"))
+            || Physics.Raycast(camera.position, camera.forward, out view, rayDistance, LayerMask.GetMask("LockerDoor3")))
         {
             cursor.SetActive(false);
         } else

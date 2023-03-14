@@ -28,6 +28,7 @@ public class Jugador : MonoBehaviour
     { 
         Cursor.lockState = CursorLockMode.Locked;
         Pad.SetActive(false);
+       
     }
 
     void Update()
@@ -35,7 +36,7 @@ public class Jugador : MonoBehaviour
         PAD();
      
         ControlMovimiento();
-        if (!padactive && !inv)
+        if (!padactive && !inv && Menu.menu_screen == false)
         {
             float movimientoAdelanteAtras = Input.GetAxis("Vertical") * v_mov;
             float movimientoCostados = Input.GetAxis("Horizontal") * v_mov;
@@ -53,7 +54,7 @@ public class Jugador : MonoBehaviour
     //Temporal
     public void PAD()
     {
-        if (Input.GetKeyDown(KeyCode.K))
+        if (Input.GetKeyDown(KeyCode.K) && Menu.menu_screen == false)
         {
             Pad.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
