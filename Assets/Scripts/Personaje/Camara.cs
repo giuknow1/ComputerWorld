@@ -13,24 +13,7 @@ public class Camara : MonoBehaviour
     GameObject jugador; 
     
 
-    public void ActivacionControl()
-    {
-        if (Input.GetKeyDown(KeyCode.E) && controlQ == false)
-        {
-            control_camara = !control_camara;
-        }
-
-        if (Input.GetKeyDown(KeyCode.Q))
-        {
-            controlQ = true;
-        }
-
-
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            controlQ = false;
-        }
-    }
+   
 
     void Start() 
     {
@@ -40,9 +23,9 @@ public class Camara : MonoBehaviour
     
     void Update() 
     {
-        ActivacionControl();
+      
 
-        if (control_camara == false)
+        if (control_camara == false && Jugador.padactive == false && Jugador.inv == false)
         {
             var md = new Vector2(Input.GetAxisRaw("Mouse X"), Input.GetAxisRaw("Mouse Y"));
             md = Vector2.Scale(md, new Vector2(sensibilidad * suavizado, sensibilidad * suavizado));

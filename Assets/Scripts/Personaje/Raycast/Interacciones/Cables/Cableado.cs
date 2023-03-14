@@ -52,6 +52,7 @@ public class Cableado : Cables
             Door.Play("AbrirPorton");
             GestorDeAudio.instancia.ReproducirSonido("Gate");
             Open.Play("Porton4 Open");
+            Tarjeta.light = false;
         }
 
 

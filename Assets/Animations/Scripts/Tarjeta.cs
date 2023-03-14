@@ -8,10 +8,11 @@ public class Tarjeta : MonoBehaviour
     public Animator Right;
     public AudioClip Puerta;
     public bool estado = true;
+    public static bool light = true;
 
         public void OnTriggerEnter(Collider other)
         {
-            if (other.gameObject.CompareTag("TDoor") == true && (estado) && (Inventario.slot6))
+            if (other.gameObject.CompareTag("TDoor") == true && (estado) && (Inventario.slot6) && light == true)
             {
             estado = false;
             AudioSource.PlayClipAtPoint(Puerta, transform.position, 0.5f);

@@ -50,6 +50,11 @@ public class RaycastInt : MonoBehaviour
             if (Physics.Raycast(camera.position, camera.forward, out hit, rayDistance, LayerMask.GetMask("Interactuable")))
             {
                 hit.transform.GetComponent<Interactuable>().Radio();
+
+                Stress.interact = true;
+                hit.transform.GetComponent<Interactuable>().Musica();
+                
+
             }
 
             if (Physics.Raycast(camera.position, camera.forward, out hit, rayDistance, LayerMask.GetMask("IntRadio")))

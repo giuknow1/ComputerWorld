@@ -11,7 +11,7 @@ public class KeypadCode : MonoBehaviour
     public Animator Porton3;
     public Animator Porton1;
     public Animator Bath;
-
+    public Animator End;
     public GameObject Numbers;
 
     public string answer = "1234";
@@ -36,16 +36,7 @@ public class KeypadCode : MonoBehaviour
     {
       
 
-        if (Ans.text == answer)
-        {
-           
-
-            GestorDeAudio.instancia.ReproducirSonido("Correct");
-            keypad.SetActive(false);
-            Ans.text = "";
-            Cursor.lockState = CursorLockMode.Locked;
-        }
-        else if (Ans.text == "1981")
+        if (Ans.text == "1981")
         {
 
             GestorDeAudio.instancia.ReproducirSonido("Correct");
@@ -54,6 +45,7 @@ public class KeypadCode : MonoBehaviour
             Cursor.lockState = CursorLockMode.Locked;
             Porton1.Play("Porton1");
             GestorDeAudio.instancia.ReproducirSonido("Gate");
+            Jugador.padactive = false;
         }
         else if (Ans.text == "1357")
         {
@@ -63,6 +55,7 @@ public class KeypadCode : MonoBehaviour
             keypad.SetActive(false);
             Ans.text = "";
             Cursor.lockState = CursorLockMode.Locked;
+            Jugador.padactive = false;
 
         } else if (Ans.text == "4273")
         {
@@ -73,9 +66,9 @@ public class KeypadCode : MonoBehaviour
             Ans.text = "";
             Cursor.lockState = CursorLockMode.Locked;
             Numbers.SetActive(true);
-
+            Jugador.padactive = false;
         }
-        else if (Ans.text == "41")
+        else if (Ans.text == "48")
         {
 
             
@@ -84,7 +77,20 @@ public class KeypadCode : MonoBehaviour
             Ans.text = "";
             Cursor.lockState = CursorLockMode.Locked;
             Bath.Play("BathDoor");
+            Jugador.padactive = false;
+        }
+        else if (Ans.text == "87541")
+        {
 
+
+            GestorDeAudio.instancia.ReproducirSonido("Correct");
+            keypad.SetActive(false);
+            Ans.text = "";
+            Cursor.lockState = CursorLockMode.Locked;
+            End.Play("EndDoor");
+            Jugador.padactive = false;
+            GestorDeAudio.instancia.ReproducirSonido("WinSong");
+            GestorDeAudio.instancia.PausarSonido("Computer World");
         }
         else
 
@@ -94,6 +100,7 @@ public class KeypadCode : MonoBehaviour
             StartCoroutine(time());
             Stress.stress += 10f;
             Stress.a += 0.1f;
+
         }
     }
 
@@ -116,6 +123,7 @@ public class KeypadCode : MonoBehaviour
         GestorDeAudio.instancia.ReproducirSonido("Key");
         keypad.SetActive(false);
         Cursor.lockState = CursorLockMode.Locked;
+        Jugador.padactive = false;
     }
 
 }

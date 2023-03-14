@@ -31,7 +31,7 @@ public class Inventario : MonoBehaviour
 
     public bool slot0 = false;
     public static bool slot1 = false;
-    public bool slot2 = false;
+    public static bool slot2 = false;
     public bool slot3 = false;
     public static bool slot4 = false;
     public static bool slot5 = false;
@@ -416,7 +416,7 @@ public class Inventario : MonoBehaviour
 
         if (abrir_inv)
         {
-
+            Jugador.inv = true;
             inventario.SetActive(true);
             Selector.SetActive(true);
             Cursor1.SetActive(false);
@@ -430,7 +430,7 @@ public class Inventario : MonoBehaviour
             Selector.SetActive(false);
             Cursor1.SetActive(true);
             Cursor0.SetActive(true);
-
+            Jugador.inv = false;
             ID = 0;
 
         }

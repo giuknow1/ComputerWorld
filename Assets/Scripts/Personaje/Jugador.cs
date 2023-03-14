@@ -7,7 +7,9 @@ public class Jugador : MonoBehaviour
     public bool canMove = true;
     public bool can2 = false;
     public GameObject Pad;
-
+    public static bool padactive = false;
+    public static bool inv = false;
+    
     public void ControlMovimiento ()
     {
         if (canMove == true)
@@ -21,39 +23,20 @@ public class Jugador : MonoBehaviour
         }
     }
 
-    public void Freeze()
-    {
-        if (Input.GetKeyDown(KeyCode.E))
-        {
-            if (can2 == true)
-            {
-                can2 = false;
-            } else
-            {
-
-                canMove = !canMove;
-                can2 = false;
-            }
-
-        }
-
-        if (canMove == false && Input.GetKeyDown(KeyCode.Q))
-        {
-            can2 = true;
-        }
-
-    }
+   
     void Start()
     { 
-        Cursor.lockState = CursorLockMode.Locked; 
+        Cursor.lockState = CursorLockMode.Locked;
+        Pad.SetActive(false);
     }
 
     void Update()
     {
         PAD();
-        Freeze();
+     
         ControlMovimiento();
-
+        if (!padactive && !inv)
+        {
             float movimientoAdelanteAtras = Input.GetAxis("Vertical") * v_mov;
             float movimientoCostados = Input.GetAxis("Horizontal") * v_mov;
             movimientoAdelanteAtras *= Time.deltaTime;
@@ -65,6 +48,7 @@ public class Jugador : MonoBehaviour
                 Cursor.lockState = CursorLockMode.None;
             }
         }
+        }
     
     //Temporal
     public void PAD()
@@ -73,6 +57,7 @@ public class Jugador : MonoBehaviour
         {
             Pad.SetActive(true);
             Cursor.lockState = CursorLockMode.None;
+            padactive = true;
         }
     }
 }

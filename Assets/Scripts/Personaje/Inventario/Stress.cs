@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class Stress : MonoBehaviour
+public class Stress : Interactuable
 {
     public Slider stress_bar;
     public static float stress = 0f;
@@ -11,7 +11,10 @@ public class Stress : MonoBehaviour
     public GameObject casete_ref;
     public static bool activar_evento_radio = false;
 
+    
+
     public bool rebobinar = false;
+    public static bool interact = false;
 
     public bool control = true;
     public bool control_reb = true;
@@ -38,29 +41,34 @@ public class Stress : MonoBehaviour
         a = 0.0f;
     }
 
-    private void Musica()
+    public override void Musica()
     {
         
 
-        if (Input.GetKeyDown(KeyCode.Mouse0) && (activar_evento_radio) && (casete) && (control) && (!rebobinar) && (!insert))
+        if (Input.GetKeyDown(KeyCode.Mouse0) && (activar_evento_radio) && (casete) && (control) && (!rebobinar) && (!insert) && (interact))
         {
+            interact = false;
             control = false;
             activar_evento_radio = false;
             reduccion = true;
             GestorDeAudio.instancia.ReproducirSonido("Computer World");
             StartCoroutine(time());
             StartCoroutine(MSC());
+            
         } 
-        else if (Input.GetKeyDown(KeyCode.Mouse0) && (activar_evento_radio) && (casete) && (control) && (rebobinar) && (control_reb) && (!insert))
+        else if (Input.GetKeyDown(KeyCode.Mouse0) && (activar_evento_radio) && (casete) && (control) && (rebobinar) && (control_reb) && (!insert) && (interact))
         {
+            interact = false;
             casete_ref.SetActive(false);
             control_reb = false;
             GestorDeAudio.instancia.ReproducirSonido("Rebobinar");
             StartCoroutine(rebob());
+            
         }
 
-        if (Input.GetKeyDown(KeyCode.Mouse0) && (activar_evento_radio) && (casete) && (control) && (insert))
+        if (Input.GetKeyDown(KeyCode.Mouse0) && (activar_evento_radio) && (casete) && (control) && (insert) && (interact))
         {
+            interact = false;
             casete_ref.SetActive(false);
             GestorDeAudio.instancia.ReproducirSonido("Insert");
             insert = false;

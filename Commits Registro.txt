@@ -121,3 +121,6 @@ COMPUTER WORLD ... COMMITS
 
 -----DIA 19-----
 66. Agregadas animaciones a los portones de la zona central del juego.
+
+----DIA 20----
+67. Agregada animacion a la puerta del final y otros detalles menores.

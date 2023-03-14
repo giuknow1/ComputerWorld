@@ -9,6 +9,12 @@ public class Interactuable : MonoBehaviour
 
     }
 
+    public virtual void Musica()
+    {
+
+    }
+
+
 }
 
     public class Audio : MonoBehaviour

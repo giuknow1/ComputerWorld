@@ -61,6 +61,7 @@ public class ReparacionCables : RepCables
             GestorDeAudio.instancia.ReproducirSonido("Gate");
             Porton3.Play("Porton3");
             Close.Play("Porton4 Close");
+            Tarjeta.light = true;
         }
 
         
