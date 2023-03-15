@@ -134,3 +134,4 @@ COMPUTER WORLD ... COMMITS
 72. Agregada funcion de Victoria de Juego
 73. Agregados Decoraciones menores a la sala central.
 74. Agregados Shaders para detalles decorativos finales.
+75. Agregado efecto de particulas para detalles decorativos finales.

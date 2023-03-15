@@ -5,6 +5,8 @@ using UnityEngine;
 public class Electricidad : TornillosCaja
 {
 
+   
+
     public GameObject tornillo1;
     public GameObject tornillo2;
     public GameObject tornillo3;

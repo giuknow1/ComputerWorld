@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Cableado : Cables
 {
+    public static ParticleSystem humo;
     public GameObject cable1;
     public GameObject cable2;
     public GameObject cable3;
@@ -36,6 +37,7 @@ public class Cableado : Cables
         if (cablescont == 2)
         {
             cable3.SetActive(false);
+            humo.Play();
         }
 
         if (cablescont == 1)
