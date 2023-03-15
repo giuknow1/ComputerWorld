@@ -34,7 +34,7 @@ public class Colisiones : MonoBehaviour
         if (other.gameObject.CompareTag("Consola") == true)
         {
             other.gameObject.SetActive(false);
-            GestorDeAudio.instancia.ReproducirSonido("Bag");
+            
         }
 
         if (other.gameObject.CompareTag("Drill") == true)

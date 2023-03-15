@@ -136,3 +136,4 @@ COMPUTER WORLD ... COMMITS
 74. Agregados Shaders para detalles decorativos finales.
 75. Agregado efecto de particulas para detalles decorativos finales.
 76. Agregados subtitulos y textos de ayuda.
+77. Agregado Item Instrucciones, para que el jugador tenga claro el objetivo del juego.
