@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 public class Jugador : MonoBehaviour
 { 
-    public float v_mov = 10.0f;
+    public static float v_mov = 10.0f;
     public bool canMove = true;
     public bool can2 = false;
     public GameObject Pad;
@@ -12,9 +12,14 @@ public class Jugador : MonoBehaviour
     
     public void ControlMovimiento ()
     {
-        if (canMove == true)
+        if (canMove == true && Porton.estado2 == false)
         {
             v_mov = 5.0f;
+        }
+
+        if (canMove == true && Porton.estado2 == true)
+        {
+            v_mov = 2.0f;
         }
 
         if (canMove == false)

@@ -21,6 +21,9 @@ public class Stress : Interactuable
     public bool casete = false;
     public bool insert = true;
 
+    public static bool stress_event = false;
+    public static float event_v = 0.0001f;
+
     public Image stressImage;
     private float r;
     private float g;
@@ -28,11 +31,11 @@ public class Stress : Interactuable
     public static float a;
 
 
-
+    public GameObject dead_screen;
 
     void Start()
     {
-      
+        dead_screen.SetActive(false);
 
         r = stressImage.color.r;
         g = stressImage.color.g;
@@ -54,6 +57,7 @@ public class Stress : Interactuable
             GestorDeAudio.instancia.ReproducirSonido("Computer World");
             StartCoroutine(time());
             StartCoroutine(MSC());
+            stress_event = false;
             
         } 
         else if (Input.GetKeyDown(KeyCode.Mouse0) && (activar_evento_radio) && (casete) && (control) && (rebobinar) && (control_reb) && (!insert) && (interact))
@@ -79,6 +83,8 @@ public class Stress : Interactuable
     private void Update()
     {
 
+        StartCoroutine(Event());
+
         a = Mathf.Clamp(a, 0, 1f);
         Efecto();
 
@@ -86,8 +92,18 @@ public class Stress : Interactuable
         stress_bar.GetComponent<Slider>().value = stress;
         Musica();
 
-       
+       if (stress >= 100f)
+        {
+            dead_screen.SetActive(true);
+            Menu.menu_screen = true;
+            stress_event = false;
+            GestorDeAudio.instancia.PausarSonido("Computer World");
+            GestorDeAudio.instancia.PausarSonido("Ambiance");
+            Reset.reset = true;
+          
+        }
         
+       
     }
 
     IEnumerator time()
@@ -98,7 +114,7 @@ public class Stress : Interactuable
             yield return new WaitForSeconds(0.1f);
             if(stress > 0)
             {
-                stress -= 0.1f;
+                stress -= 0.4f;
              
                 a -= 0.001f;
             }
@@ -115,6 +131,7 @@ public class Stress : Interactuable
         rebobinar = true;
         insert = true;
         control_reb = true;
+
     }
 
     IEnumerator rebob()
@@ -141,7 +158,14 @@ public class Stress : Interactuable
         stressImage.color = c;
     }
     
- 
+ IEnumerator Event()
+    {
+       while  (stress_event)
+        {
+            yield return new WaitForSeconds(3f);
+            stress += event_v;
+        }
+    }
 }
 
     

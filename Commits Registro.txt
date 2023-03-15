@@ -127,3 +127,7 @@ COMPUTER WORLD ... COMMITS
 68. Importadas texturas para el suelo y las paredes
 69. Agregadas texturas generales
 70. Agregada Pantalla de menu
+
+
+##### DIA 21 #####
+71. Agregada pantalla de muerte.

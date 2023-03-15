@@ -91,6 +91,10 @@ public class KeypadCode : MonoBehaviour
             Jugador.padactive = false;
             GestorDeAudio.instancia.ReproducirSonido("WinSong");
             GestorDeAudio.instancia.PausarSonido("Computer World");
+            Stress.stress_event = false;
+            Stress.a = 0f;
+            Stress.stress = 0f;
+
         }
         else
 
@@ -100,7 +104,8 @@ public class KeypadCode : MonoBehaviour
             StartCoroutine(time());
             Stress.stress += 15f;
             Stress.a += 0.1f;
-
+            Stress.stress_event = true;
+            Stress.event_v += 0.0001f;
         }
     }
 
