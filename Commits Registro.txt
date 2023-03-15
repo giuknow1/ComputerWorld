@@ -132,3 +132,4 @@ COMPUTER WORLD ... COMMITS
 ##### DIA 21 #####
 71. Agregada pantalla de muerte.
 72. Agregada funcion de Victoria de Juego
+73. Agregados Decoraciones menores a la sala central.
