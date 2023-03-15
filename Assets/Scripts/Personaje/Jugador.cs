@@ -9,7 +9,9 @@ public class Jugador : MonoBehaviour
     public GameObject Pad;
     public static bool padactive = false;
     public static bool inv = false;
-    
+    public GameObject subs;
+    public GameObject data;
+
     public void ControlMovimiento ()
     {
         if (canMove == true && Porton.estado2 == false)
@@ -33,13 +35,18 @@ public class Jugador : MonoBehaviour
     { 
         Cursor.lockState = CursorLockMode.Locked;
         Pad.SetActive(false);
-       
+        subs.SetActive(false);
     }
 
     void Update()
     {
         PAD();
-     
+
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            data.SetActive(false);
+        }
+
         ControlMovimiento();
         if (!padactive && !inv && Menu.menu_screen == false)
         {

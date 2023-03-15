@@ -135,3 +135,4 @@ COMPUTER WORLD ... COMMITS
 73. Agregados Decoraciones menores a la sala central.
 74. Agregados Shaders para detalles decorativos finales.
 75. Agregado efecto de particulas para detalles decorativos finales.
+76. Agregados subtitulos y textos de ayuda.

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Menu : MonoBehaviour
 {
 
-
+    public  GameObject data;
     public GameObject menu;
     public static bool menu_screen = true;
 
@@ -13,21 +13,24 @@ public class Menu : MonoBehaviour
     {
         GestorDeAudio.instancia.ReproducirSonido("Menu");
         Cursor.lockState = CursorLockMode.None;
+        data.SetActive(false);
     }
 
 
     void Update()
     {
         key();
+      
     }
 
-    private void Jugar()
+    public void Jugar()
     {
         menu.SetActive(false);
         menu_screen = false;
         GestorDeAudio.instancia.PausarSonido("Menu");
         Cursor.lockState = CursorLockMode.Locked;
         GestorDeAudio.instancia.ReproducirSonido("Correct");
+        data.SetActive(true);
     }
 
     public void key()
