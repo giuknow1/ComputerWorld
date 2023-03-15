@@ -300,6 +300,7 @@ public class Inventario : MonoBehaviour
             Lapiz.SetActive(true);
             Selector.SetActive(false);
             inv_control = true;
+            Reset.reset = true;
         }
 
         if ((slot11 == true) && (Input.GetKeyDown(KeyCode.Q)) && (ID == 11) && (abrir_inv) && (inv_control == false))

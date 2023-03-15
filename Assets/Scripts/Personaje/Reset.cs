@@ -19,6 +19,11 @@ public class Reset : MonoBehaviour
             Cursor.lockState = CursorLockMode.None;
             Jugador.padactive = false;
             Jugador.inv = false;
+            GestorDeAudio.instancia.PausarSonido("Computer World");
+            GestorDeAudio.instancia.PausarSonido("Ambiance");
+            GestorDeAudio.instancia.PausarSonido("WinSong");
+            reset = false;
+            
         }
     }
 }
