@@ -133,3 +133,4 @@ COMPUTER WORLD ... COMMITS
 71. Agregada pantalla de muerte.
 72. Agregada funcion de Victoria de Juego
 73. Agregados Decoraciones menores a la sala central.
+74. Agregados Shaders para detalles decorativos finales.
