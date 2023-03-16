@@ -62,7 +62,7 @@ public class ReparacionCables : RepCables
             Porton3.Play("Porton3");
             Close.Play("Porton4 Close");
             Tarjeta.light = true;
-            Cableado.humo.Stop();
+           
         }
 
         
